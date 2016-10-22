@@ -1,8 +1,7 @@
+//Task 2 "Year"
 function year(){
 	var i = +prompt('Year?',0);
-	console.log(i);
-    if(i === 0){
-    console.log('null ',i);
+	if(i === 0){
     } else if(i === 2016){
 		alert('Right!');
 	} else if (i > 2016){
@@ -16,8 +15,4 @@ function year(){
 };
 
 
-//Task 2 -calculator
-function addition (key){
-	
-	alert(key);
-}
+//Task 2 "calculator"
