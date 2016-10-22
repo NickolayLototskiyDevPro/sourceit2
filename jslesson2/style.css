@@ -1,0 +1,24 @@
+body{
+	margin: 0;
+	padding: 0 50px;
+	background-color: #8fbc8f;
+	font-family:"Droid", sans-serif; 
+}
+
+
+div{
+	width: 400px;
+	height: 200px;
+	border: 1px solid lightgray;
+	margin-bottom: 10px;
+}
+input{
+	width: 50px;
+	height: 50px;
+	font-size: 15px;
+
+}
+input[value="Enter this year"],
+input[value="Start"] {
+	width: 150px;
+}
