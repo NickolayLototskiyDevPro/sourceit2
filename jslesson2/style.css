@@ -9,13 +9,15 @@ body{
 div{
 	width: 400px;
 	height: 200px;
-	border: 1px solid lightgray;
 	margin-bottom: 10px;
 }
 input{
 	width: 50px;
 	height: 50px;
 	font-size: 15px;
+	border: none;
+	background: #fffaf0;
+	
 
 }
 input[value="Enter this year"],
