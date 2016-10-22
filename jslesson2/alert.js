@@ -18,8 +18,7 @@ function year(){
 //Task 2 "calculator"
 function addition(){
 	var i = +prompt('Enter first number',0);
-    if(i===0){
-	} else if(isNaN(i)){
+    else if(isNaN(i)){
 		alert('Enter the number');
 	}
     var y = +prompt('Enter second number',0);
@@ -30,11 +29,13 @@ function addition(){
 	else if (i + y){
 		alert('Answer ' + (y + i));
 	} 
+	else if ((i + y) === isNaN){
+		alert('Buzinga');
+	}
 }
 function subtraction(){
 	var i = +prompt('Enter first number',0);
-    if(i===0){
-	} else if(isNaN(i)){
+    else if(isNaN(i)){
 		alert('Enter the number');
 	}
     var y = +prompt('Enter second number',0);
@@ -48,8 +49,7 @@ function subtraction(){
 }
 function division(){
 	var i = +prompt('Enter first number',0);
-    if(i===0){
-	} else if(isNaN(i)){
+    ielse if(isNaN(i)){
 		alert('Enter the number');
 	}
     var y = +prompt('Enter second number',0);
@@ -63,8 +63,7 @@ function division(){
 }
 function multiplication(){
 	var i = +prompt('Enter first number',0);
-    if(i===0){
-	} else if(isNaN(i)){
+    else if(isNaN(i)){
 		alert('Enter the number');
 	}
     var y = +prompt('Enter second number',0);
