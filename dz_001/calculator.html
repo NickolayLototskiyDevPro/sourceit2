@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body {
+		font-size: verdana,sans-serif;
+	}
+	
+		.container{
+			width: 100%;
+			margin:35px auto;
+			border: 2px solid #ccc;
+			width: 600px;
+			height: 150px;
+			padding: 15px;
+		}
+		.block_wrap{
+			display:inline-block;			
+			margin:10px 35px 35px 35px;
+		}
+		.block_wrap input {
+			text-align: center;
+			font-size: 20px;
+			width: 75px;
+			border: 2px solid #666;
+			transition:all 0.75s;
+			cursor:pointer;
+		}
+		.block_wrap input:hover {
+			color:#fff;
+			background: #666;
+		}
+		.block_wrap input:active {
+			background: #ccc;
+		}
+		.calculator_title {
+			text-align: center;
+			font-size: 18px;
+			text-transform: uppercase;
+			border: 2px solid #ccc;
+			margin-bottom: 10px;
+			padding: 5px 10px ;
+		}
+		.calculator_description {
+			font-size: 16px;
+			text-decoration: underline;
+			margin-bottom: 10px;
+			border: 2px solid #ccc;
+			padding: 5px 10px ;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="calculator_title">Calculator</div>
+		<div class="calculator_description">Click function what you need.</div>
+		<div class="block_wrap">
+			<input type="sum" value="+" onclick="sum()" />
+		</div>
+		<div class="block_wrap">
+			<input type="minus" value="-" onclick="minus()" />
+		</div>
+		<div class="block_wrap">
+			<input type="multy" value="*" onclick="multy()" />
+		</div>
+		<div class="block_wrap">
+			<input type="divide" value="/" onclick="divide()" />
+		</div>
+
+
+	</div>
+	
+
+
+</body>
+<script>
+	//count numbers
+	function sum(){
+		var sumFirst = prompt("Write first number", 12);
+		sumFirst = parseInt(sumFirst); 
+		var sumSecond = prompt("Write second number", 2);
+		sumSecond = parseInt(sumSecond); 
+		
+		var countResult = (sumFirst + sumSecond);
+		
+
+		alert("Sum of the numbers is eqally " + countResult);
+	}
+	// function for minus numbers
+	function minus(){
+		var minusFirst = prompt("Write first number", 12);
+		minusFirst = parseInt(minusFirst); 
+		var minusSecond = prompt("Write second number", 2);
+		minusSecond = parseInt(minusSecond); 
+		
+		var minusResult = (minusFirst - minusSecond);
+		
+
+		alert("Result of the minus numbers is eqally " + minusResult);
+	}
+	// function for multy numbers 
+	function multy(){
+		var multyFirst = prompt("Write first number", 12);
+		multyFirst = parseInt(multyFirst); 
+		var multySecond = prompt("Write second number", 2);
+		multySecond = parseInt(multySecond); 
+		
+		var multyResult = (multyFirst * multySecond);
+		
+
+		alert("Result of the multy function is eqally " + multyResult);
+	}
+	// function for divide numbers 
+	function divide(){
+		var divideFirst = prompt("Write first number", 12);
+		divideFirst = parseInt(divideFirst); 
+		var divideSecond = prompt("Write second number", 2);
+		divideSecond = parseInt(divideSecond); 
+		
+		var divideResult = (divideFirst / divideSecond);
+		
+
+		alert("Result of the multy divide is eqally " + divideResult);
+	}
+
+
+</script>
+</html>
