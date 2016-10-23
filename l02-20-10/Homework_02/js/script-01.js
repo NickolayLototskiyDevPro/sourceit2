@@ -19,7 +19,7 @@ function registration_2() { //  Handling the click event
 	}
 };
 
-function calculator(target) { //  Handling the click event
+function calculator() { //  Handling the click event
 	hideMainTitle(); 
 	showHideButton(true); // Show calculator buttons
 };
