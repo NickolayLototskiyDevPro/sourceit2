@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+        function enter() {
+
+            var FirstName = prompt("Введите имя");
+
+            var LastName = prompt("Введите фвмилию");
+
+            var floor = confirm("Вы мужчина?");
+
+            if (floor == true) {
+                alert("Здравствуйте мистер :" + FirstName + " " + LastName);
+            }
+            else {
+                alert("Здравствуйте мисс :" + FirstName + " " + LastName);
+            }
+        }
+    </script>
+    <input type="button" value="Enter" onclick="enter()" />
+</body>
+</html>

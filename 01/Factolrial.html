@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        var factor= prompt("Введите число");
+
+        function factorial(factor) {//a function that computes the factorial
+
+            if(!isNaN(factor)) {
+
+            if (factor < 0) {
+                return "Значение должно быть положительное";
+            }
+            if(factor == 0) {
+                return 1;
+            }
+            else {                
+                return (factor * factorial(factor - 1));   //recursive function call          
+            }    
+           }
+            else {
+                return "Вы ввели не число";
+            }
+        }
+
+        alert(factorial(factor));
+
+    </script>
+</body>
+</html>

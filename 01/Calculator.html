@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        var a;
+        var b;
+
+        function plus() {
+            
+            if(EnterValues()){
+                alert(+a + +b);
+            }
+        }
+        
+        function minus() {
+            if (EnterValues()) {
+                alert(a - b);
+            }
+        }
+
+        function multiplication() {
+            if (EnterValues()) {
+                alert(a * b);
+            }
+        }
+
+        function division() {
+            if (EnterValues()) {
+                if(b!=0){
+                    alert(a / b);
+                }
+                else {
+                    alert("Деление на 0 невозможно.")
+                }
+            }
+        }
+
+        function EnterValues() {//to enter numbers Function
+            a = prompt("Введите первое значение");
+            b = prompt("Введите второе значение");
+            if (!isNaN(a) && !isNaN(b))//the number of checks
+            {
+                return true;
+            } else {
+                alert("Не число");
+                return false;
+            }
+            
+        }   
+    </script>
+    <input type="button" value="+" onclick="plus()" />
+    <input type="button" value="-" onclick="minus()" />
+    <input type="button" value="*" onclick="multiplication()" />
+    <input type="button" value="/" onclick="division()" />
+</body>
+</html>
