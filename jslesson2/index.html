@@ -90,7 +90,7 @@
 			var number1 = +prompt('Enter value 1',0);
 			if(!isNaN(number1)){ //Check the value 1 of the number
 			var number2 = +prompt('Enter value 2',0);
-			}if(!isNaN(number2)){
+			}if(!isNaN(number2) && number2 !== 0){
 			alert('Result ' + (number1 / number2));
 			}else {
 			alert('Enter the numbers');
@@ -110,7 +110,7 @@
 			//Task "Hello"
 			function data(){
 			var firstName = prompt('Enter first name','');
-			var lastName = prompt('Enter lust name','');
+			var lastName = prompt('Enter last name','');
 			var gender = confirm('If you are a man enter "OK"');
 			if (gender === true){
 			alert('Hello Mr. ' + firstName  + ' ' + lastName)
