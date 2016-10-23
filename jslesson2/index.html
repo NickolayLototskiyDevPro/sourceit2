@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-	<meta charset="UTF-8">
-	<title>Lesson 2</title>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-</head>
-<body>
-<body>
-
-<h1>Lesson 2</h1>
-
- 
-
-<div>
-<h3>Task 1</h3>
-	<input type="button" onclick="year()" value="Enter this year"/>
-</div>
-<div>
-<h3>Task 2</h3>
-	<input type="button" onclick="addition()" value="+"/>
-	<input type="button" onclick="subtraction()" value="-"/>
-	<input type="button" onclick="division()" value="/"/>
-	<input type="button" onclick="multiplication()" value="*"/>
-</div>
-<div>
-<h3>Task 3</h3>
-	<input type="button" onclick="personal_data" value="Start"/>
-</div>
-<div></div>
-    <script src="alert.js"></script>
-	</body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson 2</title>
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<style type="text/css">
+		body{
+		margin: 0;
+		padding: 0 50px;
+		background-color: #8fbc8f;
+		font-family:"Droid", sans-serif;
+		}
+		div{
+		width: 400px;
+		height: 200px;
+		margin-bottom: 10px;
+		}
+		input{
+		width: 50px;
+		height: 50px;
+		font-size: 15px;
+		border: none;
+		background: #fffaf0;
+		}
+		input[value="Enter this year"],
+		input[value="Start"] {
+		width: 150px;
+		}
+		</style>
+	</head>
+	<body>
+		<body>
+			<h1>Lesson 2</h1>
+			<div>
+				<h3>Task 1</h3>
+				<input type="button" onclick="year()" value="Enter this year"/>
+			</div>
+			<div>
+				<h3>Task 2</h3>
+				<input type="button" onclick="addition()" value="+"/>
+				<input type="button" onclick="subtraction()" value="-"/>
+				<input type="button" onclick="division()" value="/"/>
+				<input type="button" onclick="multiplication()" value="*"/>
+			</div>
+			<div>
+				<h3>Task 3</h3>
+				<input type="button" onclick="personal_data" value="Start"/>
+			</div>
+			<div></div>
+			<script src="alert.js"></script>
+		</body>
+	</html>
