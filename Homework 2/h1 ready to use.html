@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div align="center">
+<form>
+<input type="button" value="Enter" 
+
+onclick="hello()"/>
+</form>
+</div>
+</body>
+
+<script>
+function hello(){
+var firstName = prompt('Введите имя','');
+var lastName = prompt('Введите фамилию','');
+var gender = confirm('Если вы мужчина, нажмите "OK"');
+if (gender === true){
+alert('Здравствуйте, мистер ' + firstName + ' ' + lastName)
+}
+if (gender === false){
+alert('Здравствуйте миссис ' + firstName + ' ' + lastName)
+}
+}
+</script>
+</html>

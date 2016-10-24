@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+<form><input type="button" value="+" onclick="tz1()"/></form>
+</div>
+<div>
+<form><input type="button" value="-" onclick="tz2()"/></form>
+</div>
+<div>
+<form><input type="button" value="*" onclick="tz3()"/></form>
+</div>
+<div>
+<form><input type="button" value="/" onclick="tz4()"/></form>
+</div>
+
+</body>
+
+<script>
+function tz1(){
+var number1 = +prompt('Enter 1st value',0);
+if(!isNaN(number1)){ //Check the value 1 of the number
+var number2 = +prompt('Enter 2nd value',0);
+}if(!isNaN(number2)){
+alert('Result ' + (number1 + number2));
+}else {
+alert('Enter the numbers');
+}
+}
+</script>
+
+<script>
+function tz2(){
+var number1 = +prompt('Enter 1st value',0);
+if(!isNaN(number1)){ //Check the value 1 of the number
+var number2 = +prompt('Enter 2nd value',0);
+}if(!isNaN(number2)){
+alert('Result ' + (number1 - number2));
+}else {
+alert('Enter the numbers');
+}
+}
+</script>
+
+<script>
+function tz3(){
+var number1 = +prompt('Enter 1st value',0);
+if(!isNaN(number1)){ //Check the value 1 of the number
+var number2 = +prompt('Enter 2nd value',0);
+}if(!isNaN(number2)){
+alert('Result ' + (number1 * number2));
+}else {
+alert('Enter the numbers');
+}
+}
+</script>
+
+<script>
+function tz4(){
+var number1 = +prompt('Enter 1st value',0);
+if(!isNaN(number1)){ //Check the value 1 of the number
+var number2 = +prompt('Enter 2nd value',0);
+}if(!isNaN(number2)){
+alert('Result ' + (number1 / number2));
+}else {
+alert('Enter the numbers');
+}
+}
+</script>
+
+</html>
