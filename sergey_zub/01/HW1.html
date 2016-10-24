@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Homework 1</title>
+</head>
+<body>
+<div>
+    <input type="button" value="+" onclick="plus()" />
+    <input type="button" value="-" onclick="minus()" />
+    <input type="button" value="*" onclick="multipliedBy()" />
+    <input type="button" value="/" onclick="dividedBy()" />
+</div>
+</body>
+<script>
+    function plus(){
+        var firstNumber= prompt('Input first number','');
+        var secondNumber= prompt('Input second number','');
+        var sum;
+            if(isNaN(firstNumber)|| isNaN(secondNumber)){
+                alert('Wrong. Please input number');
+            }else{
+                sum= +firstNumber + +secondNumber;
+                alert(sum);
+        }
+    }
+    function minus(){
+        var firstNumber= prompt('Input first number','');
+        var secondNumber= prompt('Input second number','');
+        var difference;
+            if(isNaN(firstNumber)|| isNaN(secondNumber)) {
+                alert('Wrong. Please input number');
+            }else{
+                difference = +firstNumber - +secondNumber;
+                alert(difference);
+            }   
+    }
+    function multipliedBy(){
+        var firstNumber= prompt('Input first number','');
+        var secondNumber= prompt('Input second number','');
+        var productOfNumbers;
+            if(isNaN(firstNumber)|| isNaN(secondNumber)) {
+                alert('Wrong. Please input number');
+            }else{
+                productOfNumbers = firstNumber * secondNumber;
+                alert(productOfNumbers);
+            }    
+    }
+    function dividedBy(){
+        var firstNumber= prompt('Input first number','');
+        var secondNumber= prompt('Input second number','');
+        var privateOfNumber;
+            if(isNaN(firstNumber)|| isNaN(secondNumber)) {
+                alert('Wrong. Please input number');
+            }else{
+                privateOfNumber = firstNumber / secondNumber;
+                alert(privateOfNumber);
+            }   
+    }
+</script>
+</html>
