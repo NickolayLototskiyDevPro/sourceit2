@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Faktorial</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p>Click</p>
+		<input type="text" value="Click me" onclick="factorial()">
+	</div>
+
+
+	<script type="text/javascript">
+
+
+
+
+
+function f_Factorial (m_x) {
+   if (m_x == 0 || m_x == 1) return 1;
+   else return (m_x * f_Factorial (m_x - 1));
+}
+
+var m_Str1;
+m_Str1=window.prompt("Вычисление факториала\nВведите число", "");
+   if (m_Str1==null) {
+      document.write("Вы нажали Отмена");
+   }
+   else {
+      document.write("Факториал числа " + m_Str1 + " = ");
+      document.write(f_Factorial (parseInt(m_Str1)));
+   }
+
+
+</script>	
+</body>
+</html>
