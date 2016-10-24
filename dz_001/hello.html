@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello - surprise</title>
+	<style type="text/css">
+		.wrapper {
+			max-width: 440px;
+			width: 100%;
+			margin:0 auto;
+			margin-top: 60px;
+		}
+		.input_wrap p {
+			font-size: 22px;
+			text-align: center;
+			font-family: cursive;
+		}
+		.input_wrap {
+			text-align: center;
+		}
+		.input_wrap input {
+			border: none;
+			background:#ff3722;
+			border-radius:5px;
+			padding: 10px 15px;
+			text-align: center;
+			color: #fff;
+			text-transform:uppercase;
+			transition: all 0.75s;
+			cursor:pointer;
+		}
+		.input_wrap input:hover {
+			background:#ff877b;
+			color: #666;
+		}
+		.input_wrap input:hover .title {
+			text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="input_wrap">
+			<p class="title">This click take a few seconds, but result surprise you</p>
+			<input type="text" value="Click me" onclick="info()">
+		</div>
+	</div>
+
+
+
+
+
+	<script type="text/javascript">
+		function info() {
+			var	firstName = prompt("Pliz Write your name","Viktor");
+			var serName = prompt("Pliz write your ser-name", "Prokopovich");
+			var gender = confirm("You are a man?");
+
+			if (gender == true) { 
+				alert("Hello Mister " + firstName + " " + serName);
+			} else {
+				alert("Hello Mis " + firstName + " " + serName);
+			}
+		}
+
+	</script>
+	
+</body>
+
+</html>
