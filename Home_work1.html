@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Home work</title>
+    <style>
+
+    body{
+      background: #f9d9ef;
+    }
+    h2{
+      color: #916784;
+    }
+    .reg{
+      background: #916784;
+      color: white;
+      font-size: 20pt;
+    }
+    #main {
+      border: 4px solid #916784;
+      background: #d8bacf;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .calc {
+        width: 35px;
+        background: #916784;
+        color: white;
+        font-size: 20pt;
+    }
+    .fact{
+        background: #916784;
+        color: white;
+        font-size: 20pt;
+    }
+    </style>
+</head>
+<body>
+  <div>
+    <div align = "left" id = "main">
+      <h2>Task 1:</h2>
+      <div align = "center">
+        <input type = "button" class="reg" value = "Sign in" onclick = "registration()"/>
+      </div>
+    </div>
+    <div id = "main">
+      <div align = "left">
+        <h2>Task 2:</h2>
+      </div>
+      <div align = "center">
+        <input class = "calc" type = "button" value = "+" onclick = "plus()"/>
+        <input class = "calc" type = "button" value = "-" onclick = "minus()"/>
+        <input class = "calc" type = "button" value = "/" onclick = "divide()"/>
+        <input class = "calc" type = "button" value = "*" onclick = "multiply()"/>
+      </div>
+    </div>
+    <div id = "main">
+      <div align = "left">
+        <h2>Task 3:</h2>
+      </div>
+      <div align = "center">
+        <input type = "button" class = "fact" value = "Calculate the factorial" onclick = "factorial()"/>
+      </div>
+    </div>
+</div>
+</body>
+<script>
+
+/*TASK 1 - Registration*/
+
+  function registration(){
+  var firstName, lastName, gender;
+  firstName = prompt('Please, input your first name');
+    if(Number(firstName) != NaN) {       //check the correctness of the data entry
+      alert("It's not name!");
+    }
+  lastName = prompt('Please, input your first name');
+  if(Number(lastName) != NaN) {         //check the correctness of the data entry
+    alert("It's not last name!");
+  }
+  gender = confirm('Are you man?');
+  if(gender === true){
+    alert("Welcome, mister " + firstName + ' ' + lastName); //the output of the entered data in the message if it is a man
+  }
+  if(gender === false){
+      alert("Welcome, missis " + firstName + ' ' + lastName);  //the output of the entered data in the message if it is a woman
+  }
+}
+
+/* TASK 2  - Calculator*/
+var firstValue, secondValue;
+  function plus(){
+    firstValue = prompt("Please, input first number:");
+    firstValue = Number(firstValue);
+    if(firstValue == NaN) {
+      alert("It's not correct number!");
+    }
+
+    secondValue = prompt("Please, input second number:");
+    secondValue = Number(secondValue);
+    if(secondValue == NaN) {
+      alert("It's not correct number!");
+    }
+        alert('Your result:'+ ' ' + (+firstValue + +secondValue));
+}
+  function minus(){
+    firstValue = prompt("Please, input first number:");
+    secondValue = prompt("Please, input second nuber:");
+      alert('Your result:' + ' ' + (+firstValue - +secondValue));
+  }
+  function multiply(){
+    firstValue = prompt("Please, input first number:");
+    secondValue = prompt("Please, input second nuber:");
+      alert('Your result:'+ ' ' + (+firstValue * +secondValue));
+  }
+  function divide(){
+    firstValue = prompt("Please, input first number:");
+    secondValue = prompt("Please, input second nuber:");
+      alert('Your result:'+ ' ' + (+firstValue / +secondValue));
+  }
+
+/* TASK 3 - Calculate the factorial */
+  var f;
+    function factorial(){
+      f = prompt('Please, enter value for calculate of the factorial');
+      f = Number(f);
+      if(f == NaN){   //check the correctness of the data entry
+        alert('Its not number!'); //
+      }
+      if(f == 0 || f == 1){
+      alert('Factorial of number !' + f + ' = 1');
+    }
+
+    var i = 1;
+    var faktorial = f;
+     while(i < f) {
+      faktorial = faktorial*(f - i); //calculate the faktorial
+      i++;
+    }
+        alert('Factorial of number !'+ f + ' = ' + faktorial);
+      }
+
+</script>
+</html>
