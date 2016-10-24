@@ -31,28 +31,29 @@ function calc(target) { //  Handling the click event
 
 var read = function(sign) { 
 
-	a = +prompt('Please enter the first integer:', 2);
-	b = +prompt('Please enter the second integer:', 2);
+	a = prompt('Please enter the first integer:', '');
+	b = prompt('Please enter the second integer:', '');
 
-	if ( !isNaN(a) && !isNaN(b) && a != '' && b != '' ){
-		if (  ((1+a)+"").indexOf(".") > 0  ||  ((1+b)+"").indexOf(".") > 0  ) { // check that the number is an integer
-			return alert('Enter an integer!' );
-		} else {
-			var metod = sign;
+	if ( a === null || b === null || a == '' || b == '' ) { // If it was pressed "Cancel" or sent an empty string
+		return alert('You clicked cancel or forgot to enter a numeric value. Try again!');
+	} else if ( !isNaN(a) && !isNaN(b)) {
+		a = +a;
+		b = +b;
 
-			if (metod == 'plus') {
-				var result = a + b;
-				return alert(a + '+' + b + '=' + result);
-			} else if (metod == 'min') {
-				var result = a - b;
-				return alert(a + '-' + b + '=' + result);
-			} else if (metod == 'mul') {
-				var result = a * b;
-				return alert(a + '*' + b + '=' + result);
-			} else{
-				var result = a / b;
-				return alert(a + '/' + b + '=' + result);
-			};
+		var metod = sign;
+
+		if (metod == 'plus') {
+			var result = a + b;
+			return alert(a + '+' + b + '=' + result);
+		} else if (metod == 'min') {
+			var result = a - b;
+			return alert(a + '-' + b + '=' + result);
+		} else if (metod == 'mul') {
+			var result = a * b;
+			return alert(a + '*' + b + '=' + result);
+		} else{
+			var result = a / b;
+			return alert(a + '/' + b + '=' + result);
 		};
 	} else {
 		return alert('Enter at numerical values!');
@@ -67,13 +68,22 @@ function solveFactorial() { // Handling the click event
 		return (n != 1) ? n * factorial(n - 1) : 1;
 	};
 
-	var n = +prompt('Specify the number of factorial. The number must be an integer greater than 1', 2);
+	var result = 1;
+	var n = prompt('Specify the number of factorial. The number must be an integer greater than 1', '');
 
-	if ( !isNaN(n) && n != '' ){
+	if (n === null || n == '' ) { // If it was pressed "Cancel" or sent an empty string
+		return alert('You clicked cancel or forgot to enter a numeric value. Try again!');
+	} else if ( !isNaN(n) ) {
+		n = +n;
+
 		if (  ((1+n)+"").indexOf(".") > 0 ) { // check that the number is an integer
 			return alert('Enter an integer!' );
+		} else if ( n < 0 ) {
+			return alert('Value must be greater than 0!' );
+		} else if ( n == 0 ) {
+			result;
 		} else {
-			var result =  factorial(n);
+			result =  factorial(n);
 		};
 	} else {
 		return alert('Enter at numerical values!');
