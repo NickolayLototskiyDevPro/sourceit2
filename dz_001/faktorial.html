@@ -9,7 +9,7 @@
 <body>
 	<div class="wrapper">
 		<p>Click</p>
-		<input type="text" value="Click me" onclick="factorial()">
+		<input type="text" value="Click me" onclick="f_Factorial()">
 	</div>
 
 
@@ -19,22 +19,20 @@
 
 
 
-function f_Factorial (m_x) {
-   if (m_x == 0 || m_x == 1) return 1;
-   else return (m_x * f_Factorial (m_x - 1));
-}
+		function f_Factorial (m_x) {
+			if (m_x == 0 || m_x == 1) return 1;
+			else return (m_x * f_Factorial (m_x - 1));
+		}
 
-var m_Str1;
-m_Str1=window.prompt("Вычисление факториала\nВведите число", "");
-   if (m_Str1==null) {
-      document.write("Вы нажали Отмена");
-   }
-   else {
-      document.write("Факториал числа " + m_Str1 + " = ");
-      document.write(f_Factorial (parseInt(m_Str1)));
-   }
+		var	m_Str1 = prompt("Calculation factorial\nWrite you number", "");
+		if (m_Str1 == null) {
+			alert("You put cancel");
+		}
+		else {
+			alert(f_Factorial (parseInt(m_Str1)));
+		}
 
 
-</script>	
+	</script>	
 </body>
 </html>
