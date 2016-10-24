@@ -12,9 +12,9 @@ onclick="hello()"/>
 
 <script>
 function hello(){
-var firstName = prompt('Введите имя','');
-var lastName = prompt('Введите фамилию','');
-var gender = confirm('Если вы мужчина, нажмите "OK"');
+var firstName = prompt('Введите имя',''),
+ lastName = prompt('Введите фамилию',''),
+ gender = confirm('Если вы мужчина, нажмите "OK"');
 if (gender === true){
 alert('Здравствуйте, мистер ' + firstName + ' ' + lastName)
 }
