@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        </head>
+    <body>
+        <input type="button" value="Факториал" onclick="fucktorial()"/>
+    </body>
+    <script>
+        function fucktorial() {
+            var n = prompt('Введите число', 0);
+            if(!isNaN(n)){
+                function factorial(n) {
+                    if(n!=1){
+                        return n * factorial(n-1);
+                    }else{
+                        return 1
+                    }
+                }
+                alert('Факториал ' + n + ' равно '+ factorial(n));
+            }else{
+                alert('Данные не верны');
+            }
+        }
+    </script>
+</html>
