@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="button" value="Factory" onclick="factory()"/>
+</div>
+</body>
+<script>
+    function factory() {
+        var num=prompt('Input number','');
+        var fact=1;
+            if( isNaN(num)) {
+                alert('You have input not a number');
+            }else {
+                if (num > 0) {
+                    for (var i = num; i > 0; i--) {
+                        fact *= i;
+                    }
+                    alert(fact);
+                }
+                if (num == 0) {
+                    fact = 1;
+                    alert(fact);
+                }
+                if (num < 0) {
+                    alert('Please input positive integer');
+                }
+            }
+    }
+</script>
+</html>

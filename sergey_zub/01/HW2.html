@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Homework 1</title>
+</head>
+<body>
+<div>
+    <input type="button" value="+" onclick="nameLastName()" />
+</div>
+</body>
+<script>
+    function nameLastName(){
+        var name=prompt('What is your name?','');
+        var lastName=prompt('What is your last name?','');
+            if(isNaN(name) && isNaN(lastName)){
+                if(confirm('Are you man?')){
+                    alert('Hello man ,' + name + lastName + '!');
+                }else{
+                    alert('Hello lady ,' + name + lastName + '!');
+                }
+            }else{
+                alert('Wrong. Please try again! The name can not consist of numbers!')
+            }
+    }
+       
+</script>
+</html>
