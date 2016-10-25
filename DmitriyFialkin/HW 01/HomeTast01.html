@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Homework 1</title>
+</head>
+<body>
+<div>
+    <input type="button" value="+" onclick="plus()" />
+    <input type="button" value="-" onclick="minus()" />
+    <input type="button" value="*" onclick="multipliedBy()" />
+    <input type="button" value="/" onclick="dividedBy()" />
+</div>
+</body>
+<script>
+    function plus() {
+        var numberFirst = prompt("input number ","");
+        var numberSecond = prompt("input second number","");
+        var sum;
+        if(isNaN(numberFirst)|| isNaN(numberSecond)){
+            alert("Wrong.Please input Number");
+            }else{
+                sum = +numberFirst+ +numberSecond;
+                alert (sum);
+        }
+    }
+</script>
+</html>
