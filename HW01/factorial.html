@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Factorial</title>
+        <style>
+            input{
+                display: block;
+                margin: 0 auto;
+                text-decoration:none;
+                text-align:center;
+                padding:16px 35px;
+                border:solid 1px #03A9F4;
+                -webkit-border-radius:4px;
+                -moz-border-radius:4px;
+                border-radius: 4px;
+                font:21px Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                color:#fff;
+                background-color:#29B6F6;
+                outline: none;
+                cursor: pointer;
+            }
+            input:hover{
+                background-color:rgb(79,195,247);
+            }
+
+        </style>
+    </head>
+    <body>
+        <input type="button" value="Factorial" onclick="countFactorial()"/>
+    </body>
+    <script>
+        function countFactorial() {
+            var n = prompt('Please enter number', 0); //вводим значение n
+            if(!isNaN(n)){ //проверям на число
+                function factorial(n) { // подсчет факториала числа
+                    if(n!=1){
+                        return n * factorial(n-1);
+                    }else{
+                        return 1
+                    }
+                }
+                alert('The factorial of ' + n + ' is '+ factorial(n)); //выводим результат
+            }else{
+                alert('Data is incorrect');
+            }
+        }
+    </script>
+</html>
