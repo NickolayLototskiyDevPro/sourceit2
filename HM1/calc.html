@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="button" value="+" onclick="sum()">	
+<input type="button" value="-" onclick="sub()">
+<input type="button" value="*" onclick="mult()">
+<input type="button" value="/" onclick="div()">
+<script>
+function sum(){
+	var a = prompt('enter a number one', '');
+	var c = prompt('eneter a number two', '');
+	var b 
+	a = parseFloat(a);
+	c = parseFloat(c);
+     if (isNaN ( c)) {
+		alert ('error, enter a number');}     
+		
+	if (isNaN ( a)) {
+		alert ('error, enter a number');}
+	else {b = a+c;}	
+	alert(b); 
+	
+}
+function sub(){
+	var a = prompt('enter a number one', '');
+	var c = prompt('eneter a number two', '');
+	var b 
+	a = parseFloat(a);
+	c = parseFloat(c);
+     if (isNaN ( c)) {
+		alert ('error, enter a number');}     
+		
+	if (isNaN ( a)) {
+		alert ('error, enter a number');}
+	else {b = a-c;}	
+	alert(b); 
+	
+}
+function mult(){
+	var a = prompt('enter a number one', '');
+	var c = prompt('eneter a number two', '');
+	var b 
+	a = parseFloat(a);
+	c = parseFloat(c);
+     if (isNaN ( c)) {
+		alert ('error, enter a number');}     
+		
+	if (isNaN ( a)) {
+		alert ('error, enter a number');}
+	else {b = a*c;}	
+	alert(b); 
+	
+}
+function div(){
+	var a = prompt('enter a number one', '');
+	var c = prompt('eneter a number two', '');
+	var b 
+	a = parseFloat(a);
+	c = parseFloat(c);
+     if (isNaN ( c)) {
+		alert ('error, enter a number');}     
+		
+	if (isNaN ( a)) {
+		alert ('error, enter a number');}
+	else {b = a/c;}	
+	alert(b); 
+	
+}
+		
+	</script>
+</body>
+</html>

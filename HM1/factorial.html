@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<input type="button" value="Click Me" onclick="factorial()">	
+<script>
+var n = prompt('Enter the number for calculate the factorial: ', '');
+
+function factorial() {
+if(n == 0) {return('Factorial ' + n + ' is: 1');}	
+if(n < 0)  {return('Factorial of a negative number does not exist!');}
+if(isNaN (n)) {return('ERROR!');}
+else { 
+var b = 1;
+for (a = 1; a <= n; a++) 
+b = b * a; 
+return (b);
+}
+}
+	var result = factorial(n);
+	alert(result);
+	</script>
+
+</body>
+</html>
