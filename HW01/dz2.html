@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+ <div style="display: inline-block;">
+   <form>
+     <input type="button" value="+" onclick="addition()"/>
+   </form>
+ </div>
+ <div style="display: inline-block;">
+   <form>
+     <input type="button" value="-" onclick="subtracting()"/>
+   </form>
+ </div>
+ <div style="display: inline-block;">
+   <form>
+     <input type="button" value="*" onclick="multiplication()"/>
+   </form>
+ </div>
+ <div style="display: inline-block;">
+   <form>
+     <input type="button" value="/" onclick="division()"/>
+   </form>
+ </div>
+</body>
+
+<script>
+ function addition(){
+  var value1 = +prompt('Enter 1st value',0);
+  if(!isNaN(value1)){ 
+  var value2 = +prompt('Enter 2nd value',0);
+  }if(!isNaN(value2)){
+  alert('Result ' + (value1 + value2));
+  }else {
+  alert('Enter the value');
+}
+}
+</script>
+
+<script>
+ function subtracting(){
+  var value1 = +prompt('Enter 1st value',0);
+  if(!isNaN(value1)){
+  var value2 = +prompt('Enter 2nd value',0);
+  }if(!isNaN(value2)){
+  alert('Result ' + (value1 - value2));
+  }else {
+  alert('Enter the value');
+}
+}
+</script>
+
+<script>
+ function multiplication(){
+  var value1 = +prompt('Enter 1st value',0);
+  if(!isNaN(value1)){
+  var value2 = +prompt('Enter 2nd value',0);
+  }if(!isNaN(value2)){
+  alert('Result ' + (value1 * value2));
+  }else {
+  alert('Enter the value');
+}
+}
+</script>
+
+<script>
+ function division(){
+  var value1 = +prompt('Enter 1st value',0);
+  if(!isNaN(value1)){
+  var value2 = +prompt('Enter 2nd value',0);
+  }if(!isNaN(value2)){
+  alert('Result ' + (value1 / value2));
+  }else {
+  alert('Enter the value');
+}
+}
+</script>
+ 
+</html>
