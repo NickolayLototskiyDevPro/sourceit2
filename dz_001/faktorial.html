@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Faktorial</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p>Click</p>
+		<input type="text" value="Click me" onclick="f_Factorial()">
+	</div>
+
+
+	<script type="text/javascript">
+
+
+
+
+
+		function f_Factorial (m_x) {
+			if (m_x == 0 || m_x == 1) return 1;
+			else return (m_x * f_Factorial (m_x - 1));
+		}
+
+		var	m_Str1 = prompt("Calculation factorial\nWrite you number", "");
+		if (m_Str1 == null) {
+			alert("You put cancel");
+		}
+		else {
+			alert(f_Factorial (parseInt(m_Str1)));
+		}
+
+
+	</script>	
+</body>
+</html>
