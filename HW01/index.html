@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="all.css" type="text/css"/>
+    <script type="text/javascript" src="main.js"></script>
+    <title>Home work 01</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="layout">
+            <h1 class="logo"><a href="#">Aleksey Vasilevskiy</a></h1>
+            <ul class="nav">
+                <li><a href="#" onclick="pageSelect('greetings')">Greetings</a></li>
+                <li><a href="#" onclick="pageSelect('calculator')">Calculator</a></li>
+                <li><a href="#" onclick="pageSelect('factorial')">Factorial</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="layout">
+            <div class="main-block" id="intro" style="display: block">
+                <h4>Please make You choice</h4>
+            </div>
+            <div class="main-block" id="greetings" style="display: none">
+                <h4>Please enter You credentials</h4>
+                <p>Name: <input type="text" id="name"/></p>
+                <p>Second name: <input type="text" id="s-name"/></p>
+                <p>Gender:
+                    <input class="genderCheckbox" type="radio" name="gender" value="Male" checked="checked">Male &nbsp;
+                    <input class="genderCheckbox" type="radio" name="gender" value="Female">Female
+                </p>
+                <input type="button" onclick="showGreetings()" value="Submit">
+            </div>
+            <div class="main-block" id="calculator" style="display: none">
+                <h4>Please choose calculate operation</h4>
+                <div>
+                    <button class="button" onclick="calculate('+')">+</button>
+                    <button class="button" onclick="calculate('-')">-</button>
+                    <button class="button" onclick="calculate('*')">*</button>
+                    <button class="button" onclick="calculate('/')">/</button>
+                </div>
+            </div>
+            <div class="main-block" id="factorial" style="display: none">
+                <h4>Please enter value to calculate factorial</h4>
+                <p>Value: <input type="text" size="4" id="factorial-value" value="1"/>
+                <input type="button" onclick="factorial()" value="Submit">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout">
+            <div id="content">
+                <h6>Home work task №1</h6>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
