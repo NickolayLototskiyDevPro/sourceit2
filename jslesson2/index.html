@@ -24,7 +24,8 @@
 		background: #fffaf0;
 		}
 		input[value="Enter this year"],
-		input[value="Start"] {
+		input[value="Start"],
+                input[value="Factorial"] {
 		width: 150px;
 		}
 		</style>
@@ -47,7 +48,10 @@
 				<h3>Task 3</h3>
 				<input type="button" onclick="data()" value="Start"/>
 			</div>
-			<div></div>
+			<div>
+                <h3>Task 4</h3>
+                <input type="button"  onclick="showFactorial()" value="Factorial"/>
+            </div>
 			<script>
 				//Task  "Year"
 			function enterYear(){
@@ -109,8 +113,8 @@
 			}
 			//Task "Hello"
 			function data(){
-			var firstName = prompt('Enter first name','');
-			var lastName = prompt('Enter last name','');
+			var firstName = prompt('Enter','First name');
+			var lastName = prompt('Enter','Last name');
 			var gender = confirm('If you are a man enter "OK"');
 			if (gender === true){
 			alert('Hello Mr. ' + firstName  + ' ' + lastName)
@@ -119,6 +123,24 @@
 			alert('Hello Ms. ' + firstName  + ' ' + lastName)
 			}
 			}
+            //Task "Factorial"
+            function showFactorial(){
+            var numF = +prompt ('Enter the number',0);
+            if(!isNaN(numF)){
+            function factorial(numF){
+            if (numF === 0 || numF === 1) {
+            return 1;
+            } 
+            else {
+            return (numF * factorial(--numF));
+            }
+            }
+            alert ('Factorial   ' + numF +'   '+  factorial(numF));
+            }
+            else{
+            alert('Enter the number');
+            }
+            }
 			</script>
 		</body>
 </html>
