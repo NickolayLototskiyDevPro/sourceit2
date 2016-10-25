@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Страница</title>
+<meta charset="utf-8">
+</head>
+<body>
+    <script>
+        var name = prompt('What is your name?', '');
+        var surname = prompt('What is your surname?', '');
+        var gender = confirm('If you are a man, click ok, but if a woman click cancel');
+        //A condition in which, if true output variable the alert first, if not the second
+        if(gender==true){
+            alert('Welcome Mr.'+name+surname);
+        }
+        else{
+            alert('Welcome Mss.'+name+surname);
+        }
+    </script>
+</body>
+</html>

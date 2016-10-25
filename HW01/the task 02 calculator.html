@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Страница</title>
+<meta charset="utf-8">    
+    <script>
+        function summa() {
+        var num1 = prompt('Enter the first number', 0);
+        var num2 = prompt('Enter the second number', 0);
+        alert(+num1+(+num2));
+        }
+        function subtraction() {
+        var num1 = prompt('Enter the first number', 0);
+        var num2 = prompt('Enter the second number', 0);
+        alert(num1-num2);
+        }
+        function multiplication() {
+        var num1 = prompt('Enter the first number', 0);
+        var num2 = prompt('Enter the second number', 0);
+        alert(+num1*(+num2));
+        }
+        function division() {
+        var num1 = prompt('Enter the first number', 0);
+        var num2 = prompt('Enter the second number', 0);
+        alert(+num1/(+num2));
+        }
+    </script>
+    <style>
+        input {
+            width: 30px;
+            height: 30px;
+            display: block;
+            float: left;
+            margin-left: 50px;
+            margin-top: 20px; 
+            background-color: gold;
+            color: blue;
+            font-size: 20px;
+        }
+        div {
+            width: 15%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p><input type="button" value="+" onclick="summa()"></p>
+    <p><input type="button" value="-" onclick="subtraction()"></p>
+    <p><input type="button" value="*" onclick="multiplication()"></p>
+    <p><input type="button" value="/" onclick="division()"></p>
+    </div>    
+</body>
+</html>
