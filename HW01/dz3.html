@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var fac= prompt('Enter value');
+function factorial(fac) {
+if(!isNaN(fac)) {
+if (fac < 0) {
+return "Значение должно быть положительное";
+}
+if(fac == 0) {
+return 1;
+}
+else {
+return (fac * factorial(fac - 1));
+}
+}
+else {
+return "Вы ввели не число";
+}
+}
+alert(factorial(fac));
+</script> 
+</body>
+</html>
