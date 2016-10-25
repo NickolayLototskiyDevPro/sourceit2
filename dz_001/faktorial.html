@@ -3,36 +3,78 @@
 	<meta charset="UTF-8">
 	<title>Faktorial</title>
 	<style type="text/css">
-		
+		.wrapper {
+			max-width: 440px;
+			width: 100%;
+			height: 200px;
+			margin:0 auto;
+			margin-top: 60px;
+			border: 2px solid #666;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+		}
+		.wrapper p {
+			font-size: 22px;
+			text-align: center;
+			font-family: cursive;
+		}
+		.wrapper {
+			text-align: center;
+		}
+		.wrapper input {
+			margin-top: 30px;
+			border: none;
+			background:#8564FC;
+			border-radius:5px;
+			padding: 10px 15px;
+			text-align: center;
+			color: #fff;
+			text-transform:uppercase;
+			transition: all 0.75s;
+			cursor:pointer;
+		}
+		.wrapper input:hover {
+			background:#B7A3FF ;
+			color: #666;
+		}		
+
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		<p>Click</p>
-		<input type="text" value="Click me" onclick="f_Factorial()">
+		<p>Click to known factorial of your number</p>
+		<input type="button" value="Factorial" onclick="factorial()">
 	</div>
 
 
 	<script type="text/javascript">
+		function factorial() {
+			var number = prompt("Write number", "5") ;
+			var number = parseInt(number);
 
+			var fact = 1;
+			// check  number less 1
+			if (number < 1) { 
+				alert("Is not a number");
+			} 
+			// check  number true or not
+			if (isNaN(number)) {      		
+				alert("Pliz write a number");
+			} else {
+				for (var i = 0; i <= number - 1; i++) { 
+					if (number == 1) {
+						alert(number);
+					} else { 
+						fact = fact*(i + 1);
+					}
 
+				}
 
-
-
-		function f_Factorial (m_x) {
-			if (m_x == 0 || m_x == 1) return 1;
-			else return (m_x * f_Factorial (m_x - 1));
+				alert("Factorial of your number is " + fact );
+			}
 		}
-
-		var	m_Str1 = prompt("Calculation factorial\nWrite you number", "");
-		if (m_Str1 == null) {
-			alert("You put cancel");
-		}
-		else {
-			alert(f_Factorial (parseInt(m_Str1)));
-		}
-
 
 	</script>	
+
 </body>
 </html>
