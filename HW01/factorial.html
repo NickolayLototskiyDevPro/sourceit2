@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="enter" onclick="count()" >
+    <script>
+        function count() {
+            var number = prompt("Enter number","") ;
+            var fact = 1;
+            if (number < 1) {
+                alert("Isn`t a natural number! Factorial impossible!");
+            }
+            if (number.replace(/\d/g,'').length) {
+                alert("Error! You entered is not a number");
+            } else {
+                for (var i = 0; i <= number - 1; i++) {
+                    if (number == 1) {
+                        alert(number);
+                    } else {
+                        fact = fact*(i + 1);
+                    }
+                }
+                alert("Factorial: " + fact );
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="+" onclick="addition()" />
+    <input type="button" value="-" onclick="subtraction()" />
+    <input type="button" value="*" onclick="multiplication()" />
+    <input type="button" value="/" onclick="division()" />
+    <script>
+        "use strict";
+        //   adding numbers
+        function addition() {
+            var numFirst = prompt("Please enter the first number:",'');
+            var numSecond = prompt("Please enter the another number:",'');
+            var result= (+numFirst)+(+numSecond);
+            if (numFirst.replace(/\d/g, '').length||numSecond.replace(/\d/g, '').length){
+                alert ('Error! You entered is not a number ');
+            } else {alert("Result: " + result);}
+        };
+
+        //    subtraction of numbers
+        function subtraction() {
+            var numFirst = prompt("Please enter the first number:",'');
+            var numSecond = prompt("Please enter the another number:",'');
+            var result= (+numFirst)-(+numSecond);
+            if (numFirst.replace(/\d/g, '').length||numSecond.replace(/\d/g, '').length){
+                alert ('Error! You entered is not a number ');
+            } else {alert("Result: " + result);}
+        };
+
+        //    multiplication of numbers
+        function multiplication() {
+            var numFirst = prompt("Please enter the first number:",'');
+            var numSecond = prompt("Please enter the another number:",'');
+            var result= (+numFirst)*(+numSecond);
+            if (numFirst.replace(/\d/g, '').length||numSecond.replace(/\d/g, '').length){
+                alert ('Error! You entered is not a number ');
+            } else {alert("Result: " + result);}
+        };
+        //    division numbers
+        function division() {
+            var numFirst = prompt("Please enter the first number:",'');
+            var numSecond = prompt("Please enter the another number:",'');
+            var result= (+numFirst)/(+numSecond);
+            if (numFirst.replace(/\d/g, '').length||numSecond.replace(/\d/g, '').length){
+                alert ('Error! You entered is not a number ');
+            } else {alert("Result: " + result);}
+        };
+    </script>
+</body>
+</html>

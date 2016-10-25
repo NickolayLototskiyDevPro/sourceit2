@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome</title>
+</head>
+<body>
+	<input type="button" value="Enter" onclick="hello()" />
+	<script>
+		"use strict";
+// function of welcome
+		function hello() {
+            var name = prompt('What is your name?','');
+            var last = prompt('What is your last name?','');
+            /*if(typeof(name) !== 'string'||typeof(last) != 'string' ){
+                alert('Go into the wood!!!');
+            };*/
+            var polite = confirm('Are you a man?');
+            var result = 'Welcome, '+polite+' '+name+' '+last;
+            if (polite == true) {
+                polite = 'Mr.';
+                polite = 'Mrs.';
+            }
+            if (name.replace(/\d/g,'').length||last.replace(/\d/g,'').length){
+                alert(result);
+            } else {
+                alert('Not available name or last name. Please repeat!');
+            }
+        }
+	</script>
+</body>
+</html>
