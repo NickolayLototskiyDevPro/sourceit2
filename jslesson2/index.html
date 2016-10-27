@@ -126,7 +126,7 @@
             //Task "Factorial"
             function showFactorial(){
             var numF = +prompt ('Enter the number',0);
-            if(!isNaN(numF)){
+            if(!isNaN(numF) && numF > -1){
             function factorial(numF){
             if (numF === 0 || numF === 1) {
             return 1;
@@ -135,12 +135,13 @@
             return (numF * factorial(--numF));
             }
             }
-            alert ('Factorial   ' + numF +'   '+  factorial(numF));
+            alert (numF +' !  =  '+  factorial(numF));
             }
             else{
-            alert('Enter the number');
+            alert('Enter a positive number');
             }
             }
 			</script>
 		</body>
 </html>
+
