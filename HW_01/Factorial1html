@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+    <title>factorial</title>
+	
+</head>
+<body>
+    <script>
+
+        var n = prompt("Enter a number"); // variable asignment by prompt window
+        function factorial(n) {// function which  lauch factorial
+            if(!isNaN(n)) {
+            if (n < 0) {
+                return 'Entering number must be > 0';
+            }
+            if(n == 0) {
+                return 1;
+            }
+            else {                
+                return (n * factorial(n - 1));   //recursive function call          
+            }    
+           }
+            else {
+                return "you entered not a number";
+            }
+        }
+        alert(factorial(n));
+    </script>
+</body>
+</html>
