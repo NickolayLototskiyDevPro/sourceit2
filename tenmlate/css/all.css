@@ -34,7 +34,7 @@ a, ins {
   } 
   /* ***************************************** */
 .wrapper {
-	width:1400px;
+	width:1300px;
 	height:100%;
 	margin: 0 auto;
     color:#ffffff;
@@ -102,19 +102,19 @@ a, ins {
 	            -18px 18px #62636d,
 	            -19px 19px #62636d;
 	position: absolute;
-	right: 114px;
+	right: 65px;
 	top: 54px;
 	z-index: 20;
 	
 }
 .box_dark{
-	width: 861px;
+	width: 859px;
 	height: 430px;
 	position: absolute;
 	z-index: 10;
 	background: #212331;
 	border-radius: 8px;
-	left: 160px;
+	left: 111px;
 	top: 45px;
 	box-shadow: -1px 1px #212331,
 	            -2px 2px #1a1b2b,
@@ -365,8 +365,73 @@ a, ins {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding-bottom: 25px;
-	border: 1px solid red;
+	/* background: red; */
 }
+.portfolio_block .img_block_wrapper .t2{
+	background: blue;
+}
+/* _***************************************** */
+
+.img_container{
+    /* Как должны быть выражены 3D эффекты */
+    perspective: 800px;
+    -webkit-perspective: 800px;
+    background: white;
+    width:370px;
+    height:290px;
+    position:relative;
+}
+.img_container .img_front,
+.img_container .img_back{
+    /* Подключение 3D трансформации */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+     /*Мы используем 2 разных дива для передней и задней части телефона. Это свойство прячет див когда он поворачивается, таким образом будет показываться противоположная сторона*/
+     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width:370px;
+    height:290px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-145px 0 0 -185px;
+    /* Анимация переходов */
+    transition:0.8s;
+}
+.img_back{
+    Задняя сторона поворачивается на 180 градусов по умолчанию
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    background:#506083;
+}
+.img_container .img_back h3{
+	margin:67px 0 16px 0;
+	font-weight: 700;
+	font-size: 24px;
+	color: #ffffff;
+}
+.img_container .img_back p{
+   font-size: 14px;
+   margin: 0 45px 16px 45px;
+   color: #ffffff;
+}
+.img_container .img_back .eye{
+    width: 40px;
+    height: 40px;
+    background: url("../img/eye.png") 50% 50% no-repeat;
+    margin: 0 auto;
+}
+.img_container:hover .img_front{
+    /*Когда на контейнер происходит наведение мышкой и срабатывает hover, повернуть переднюю часть и спрятать её */
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+}
+.img_container:hover .img_back{
+    /*... в то же время повернуть заднюю часть и сделать видимой*/
+    transform:rotateY(360deg);
+    -webkit-transform:rotateY(360deg);
+}
+/* ****************************************** */
 .portfolio_block_bottom_block{
 	font-weight: 600;
 	font-size: 18px;
@@ -383,19 +448,6 @@ a, ins {
 	background: url("../img/Arrow.png") 80% 38% no-repeat;
 	margin: 0 auto;
 	background-size: 85%;
-}
-.portfolio_block .img_block{
-	position: relative;
-}
-.portfolio_block .img_block:after{
-	content: "";
-	background: #506083;
-	width: 369px;
-	height: 290px;
-	box-sizing: border-box;
-	position: absolute;
-	left: 370px;
-	display: none;
 }
 .reviews_block{
 	width: 100%;
@@ -544,18 +596,22 @@ a, ins {
 	width: 100%;
 	height: 512px;
 }
+
 .map-container iframe{
-	width: 100%;
-	display: block;
-	pointer-events: none;
-	position: relative; /* IE needs a position other than static */
+    width: 100%;
+    display: block;
+    pointer-events: none;
+    position: relative; /* IE needs a position other than static */
+}
+.map-container iframe.clicked{
+    pointer-events: auto;
 }
 .contact_block{
 	width: 100%;
 	height: 670px;
 	background: #475a85;
 	text-align: center;
-	color: #fffff;
+	color: #ffffff;
 }
 .contact_block_header_block{
 	width: 270px;
@@ -604,7 +660,6 @@ a, ins {
 	text-indent: 1px;
 	margin: 1px 0 12px 0;
 }
-
 .contact_block_contact_list li:nth-of-type(2){
 	text-indent: 1px;
 	margin-bottom: 29px;
@@ -612,7 +667,6 @@ a, ins {
 .contact_block_contact_list li:nth-of-type(3){
 	margin-bottom:20px;
 	position: relative;
-	
 }
 .contact_block_contact_list li:nth-of-type(4){
 	margin-bottom: 19px;
@@ -690,7 +744,6 @@ a, ins {
  	background: #eeeeee;
  	cursor: pointer;
  }
-
 .contact_block_form_wrapper input:nth-of-type(2){
  	margin: 0 0 19px 0;
  	padding-left: 24px;
@@ -716,6 +769,13 @@ a, ins {
     display: block;
     line-height: 60px;
 }
+.scrolling_up{
+	width: 60px;
+	height: 60px;
+	background: url("../img/arrowUp.png") 50% 50% no-repeat;
+	display: block;
+	margin: 389px 0 0 1150px;
+}
 .footer{
 	height: 177px;
 	width: 100%;
@@ -727,13 +787,14 @@ a, ins {
 	color: #76777f;
 }
 .footer h3{
-	font-size: 23px;
-	padding-top: 19px;
+	font-size: 24px;
+	padding-top: 18px;
+	text-indent: 1px;
 }
 .footer a{
 	color: #76777f;
 }
 .footer span{
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
