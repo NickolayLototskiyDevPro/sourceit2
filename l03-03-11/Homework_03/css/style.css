@@ -86,6 +86,9 @@ a.button:hover {
     margin: 0;
 	display: inline-block;
 }
+sub {
+    font-size: 9px;
+}
 
 /* main */
 

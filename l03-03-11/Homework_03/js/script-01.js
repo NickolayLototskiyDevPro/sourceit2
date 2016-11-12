@@ -7,13 +7,13 @@ function taskOne() {
 
 	do {
 		if ( i & 1) {
-				lem = s.charAt(i) + lem;
-				p.innerHTML = lem;
-				alert(lem);
+			lem = s.charAt(i) + lem;
+			p.innerHTML = lem;
+			alert(lem);
 		} else {
-				lem = lem + s.charAt(i);
-				p.innerHTML = lem;
-				alert(lem);
+			lem = lem + s.charAt(i);
+			p.innerHTML = lem;
+			alert(lem);
 		}
 		i++;
 	} while ( i < s.length );
@@ -25,11 +25,12 @@ function solveFactorialWhile() {
 	var n = prompt('Specify the number of factorial.', '');
 
 	function f(n) {
+		var strres = n;
 		var result = 1;
-    
-	    while (n--) result *= n + 1;
-	    
-	    return p.innerHTML = result;
+
+		while (n--) result *= n + 1;
+
+		return p.innerHTML = strres + '! = ' + result;
 	};
 
 	if (n === null || n == '' ) { // If it was pressed "Cancel" or sent an empty string
@@ -55,13 +56,14 @@ function solveFactorialFor() {
 	var n = prompt('Specify the number of factorial.', '');
 
 	function f(n) {
+		var strres = n;
 		var result = 1;
     
     	for (var i = 2; i <= n; i++) {
         	result = result * i;
     	}
 	    
-	    return p.innerHTML = result;
+	    return p.innerHTML = strres + '! = ' + result;
 	};
 
 	if (n === null || n == '' ) { // If it was pressed "Cancel" or sent an empty string
@@ -144,7 +146,7 @@ function arithmProgrFormula() {
 
 };
 
-function gitLiter() {
+function getLiter() {
 	var p = document.getElementById('stringFour');
 	var n = prompt('Enter the number of literatsy.', '');
 	var s = 0;
@@ -181,6 +183,57 @@ function gitLiter() {
 			return alert('Enter an integer!' );
 		} else if ( n < 0 ) {
 			return alert('Value must be greater than 0!' );
+		} else {
+			f(n);
+		};
+
+	} else {
+		return alert('Enter a positive integer!');
+	}
+
+};
+
+function getBinary() {
+	var p = document.getElementById('stringFive');
+	var n = prompt('Specify the number arithmetic progression.', '');
+
+	function f(n) {
+		var strres = n;
+		var n = n;
+		var str = '';
+
+		if (!n) return p.innerHTML = strres + '<sub>10</sub>' + ' = ' + strres + '<sub>2</sub>';
+		if (n == 1) return p.innerHTML = strres + '<sub>10</sub>' + ' = ' + strres + '<sub>2</sub>';
+
+		if (n > 0 ) {
+			var b = n; 
+			var r;
+			do {
+				r = b; 
+				b = b / 2; 
+				if ( r%2 ) {
+					str = '1' + str;
+					b = ( r - 1) / 2;
+				} else {
+					str = '0' + str;
+				}
+			} while ( b > 1 );
+
+			str = '1' + str;
+
+			return p.innerHTML = strres + '<sub>10</sub>' + ' = ' + str + '<sub>2</sub>';
+		}
+
+	};
+
+	if (n === null || n == '' ) { // If it was pressed "Cancel" or sent an empty string
+		return alert('You clicked cancel or forgot to enter a numeric value. Try again!');
+	} else if ( !isNaN(parseFloat(n)) && isFinite(n) ) {
+		n = +n;
+		if (  ((1+n)+"").indexOf(".") > 0 ) { // check that the number is an integer
+			return alert('Enter an integer!' );
+		/*} else if ( n < 0 ) {
+			return alert('Value must be greater than 0!' );*/
 		} else {
 			f(n);
 		};
