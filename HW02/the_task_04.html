@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+    </head>
+    <body>
+        <script>
+            var str = '';
+            var n = prompt('Enter the number', 1);
+            function addTo(n) {
+            for (var i = 1; i <= n; i++) {
+                
+                for( var j = 1; j <= 3; j++) {
+                    if ( j == 1) {//at the first iteration
+                        str += 'a';
+                    }else if ( j == 2) {//at the second iteration
+                        str += 'b';
+                    }else if ( j == 3) {//at the third iteration
+                        str += 'c';
+                    }
+                }
+              }
+            return str;
+            }
+            alert( addTo(n) );
+        </script>
+    </body>
+</html>

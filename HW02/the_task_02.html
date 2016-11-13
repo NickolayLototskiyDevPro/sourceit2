@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+    </head>
+    <body>
+        <script>
+            var n = prompt('Enter the number', 1);
+            function facTo(n) {
+              var fac = 1;
+                
+                if( n != 1) {
+              for (var i = 1; i <= n; i++) {
+                fac *= i;//We consider the factorial
+              }
+              return fac;//return value in a variable
+                }else if ( n = 1){    
+                    return 1; 
+                }
+            }
+            
+            alert( facTo(n) );
+        </script>
+    </body>
+</html>
