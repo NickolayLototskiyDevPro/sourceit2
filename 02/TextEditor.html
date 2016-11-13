@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        var text = "Lorem ipsum";
+
+        var b1 = "+";
+
+        var b2="-";
+
+        var b3="/";
+
+        var b4="*";
+
+        var leng = prompt("Введите число больше 1:",0);
+
+
+
+        function txteditor()
+        {
+            if (!isNaN(leng) && leng>0)
+            {
+                for (var i = 1; i <= leng; i++)
+                {
+
+                    if (i % 2 != 0 && i == leng)
+                    {
+                        break;
+                    }
+
+                    else
+                    {
+                        if (i % 2 == 0)
+                        {
+                            if (text.charAt(text.length - 1) == "m" || text.charAt(text.length - 1) == b4)
+                            {
+                                text = text + b1;
+                            }
+                            else if (text.charAt(text.length - 1) == b1)
+                            {
+                                text = text + b2;
+                            }
+                            else if (text.charAt(text.length - 1) == b2)
+                            {
+                                text = text + b3;
+                            }
+                            else
+                            {
+                                text = text + b4;
+                            }
+                        }
+                        else
+                        {
+                            if (text.charAt(0) == "L" || text.charAt(0) == b4)
+                            {
+                                text = b1 + text;
+                            }
+                            else if (text.charAt(0) == b1)
+                            {
+                                text = b2 + text;
+                            }
+                            else if (text.charAt(0) == b2)
+                            {
+                                text = b3 + text;
+                            }
+                            else if (text.charAt(0) == b3)
+                            {
+                                text = b4 + text;
+                            }
+                        }
+                    }
+                }
+                return text;
+            }
+            else
+            {
+                return "Вы ввели не число или значение меньше 1";
+            }
+        }
+        
+        alert(txteditor());
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        
+        var number = prompt("Введите число больше 1:",0);
+
+        var binarstr = "";
+            
+
+        function binar()
+        {
+            if (!isNaN(number) && number>0)
+            {
+                do
+                {
+                    if (number == 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (number % 2 == 0)
+                        {
+                            binarstr = "0" + binarstr;
+                            number = number / 2;
+                        }
+                        else
+                        {
+                            binarstr = "1" + binarstr;
+                            number--;
+                            number = number / 2;
+                        }
+                    }
+                }
+                while (number >= 0);
+                return " В двоичном виде: " + binarstr;
+            }
+            else
+            {
+                return "Вводите только числа больше 0";
+            }
+        }
+        
+        alert(binar());
+
+
+    </script>
+
+
+   
+</body>
+</html>
