@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="all.css" type="text/css"/>
+    <script type="text/javascript" src="main.js"></script>
+    <title>Home work 02</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="layout">
+            <h1 class="logo"><a href="#">Aleksey Vasilevskiy</a></h1>
+            <ul class="nav">
+                <li><a href="#" onclick="pageSelect('classwork')">Classwork</a></li>
+                <li><a href="#" onclick="pageSelect('factorial')">Factorial</a></li>
+                <li><a href="#" onclick="pageSelect('progression')">Arithmetical progression</a></li>
+                <li><a href="#" onclick="pageSelect('abc')">ABC</a></li>
+                <li><a href="#" onclick="pageSelect('dec-to-bin')">Convert to bin</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="layout">
+            <div class="main-block" id="intro" style="display: block">
+                <h4>Please make You choice</h4>
+            </div>
+            <div class="main-block" id="classwork" style="display: none">
+                <div style="display: inline block">
+                    <h4>Please enter row quantity</h4>
+                    <input type="text" size="3" id="row-count" value="1"/>
+                    <input type="button" onclick="classwork()" value="Submit">
+                    <div class="result-conteiner">
+                        <div class="result-view">
+                            <p id="result-view"></p>
+                        </div>
+                        <div class="source">
+                            <pre>function classwork(){<br/><br/>    var rowCount = document.getElementById(&quot;row-count&quot;).value;<br/>    var i = 0;<br/>    var str = &#39;lorem ipsulum&#39;;<br/>    var resultString = &#39;&#39;;<br/><br/>    if (isNaN(rowCount)){<br/>        resultString = &#39;Enter the number!&#39;;<br/>    } else {<br/>        do{<br/>            str = (i % 2 ? &#39;&#39; : &#39;+&#39;) + str + (i % 2 ? &#39;+&#39; : &#39;&#39;);<br/>            resultString += str + &#39;br&gt;&#39;;<br/>        } while (i++ &lt; rowCount)<br/>        if (i % 2){     // add another one if even<br/>            str = (i % 2 ? &#39;&#39; : &#39;+&#39;) + str + (i % 2 ? &#39;+&#39; : &#39;&#39;);<br/>            resultString += str + &#39;br&gt;&#39;;<br/>            console.log(str);<br/>        }<br/>    }<br/>    document.getElementById(&#39;result-view&#39;).innerHTML = resultString;<br/>}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block" id="progression" style="display: none">
+                <div style="display: inline block">
+                    <h4>Please enter progression step</h4>
+                    <input type="text" size="3" id="a-progression" value="1"/>
+                    <input type="button" onclick="progression()" value="Submit">
+                    <div class="result-conteiner">
+                        <div class="result-view">
+                            <p id="a-result-view"></p>
+                        </div>
+                        <div class="source">
+                            <pre>function progression(){<br/><br/>    var d = document.getElementById(&quot;a-progression&quot;).value;<br/>    var MAX = 16; // number of result digits<br/>    var resultString = &#39;&#39;;<br/><br/>    if (isNaN(d)){<br/>        resultString = &#39;Enter the number!&#39;;<br/>    } else {<br/>        var a = 1;  // first element of progression<br/>        resultString = a;   // no need calculate first element<br/>        for(n = 2; n &lt;= MAX; n++){<br/>            resultString += &#39;, &#39; + (a + (n - 1) * d);<br/>        }<br/>    }<br/>    document.getElementById(&#39;a-result-view&#39;).innerHTML=resultString;<br/>}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block" id="factorial" style="display: none">
+                <h4>Please enter value to calculate factorial</h4>
+                <input type="text" size="4" id="factorial-value" value="1"/>
+                <input type="button" onclick="factorial()" value="Submit">
+                <div class="result-conteiner">
+                    <div class="result-view">
+                        <p id="f-result-view"></p>
+                    </div>
+                    <div class="source">
+                        <pre>function factorial() {<br/><br/>    var MAX_VALUE = 170;<br/>    var MIN_VALUE = 0;<br/>    var resultString = &#39;&#39;;<br/>    var operand = document.getElementById(&quot;factorial-value&quot;).value;<br/><br/>    if (!isNaN(operand)) {<br/>        if (parseInt(operand) == parseFloat(operand)) {<br/>            operand = parseInt(operand);<br/>            if (operand &gt;= MIN_VALUE &amp;&amp; operand &lt;= MAX_VALUE) {<br/>                var result = 1;<br/>                for (var i = 2; i &lt;= operand; i++){<br/>                    result *= i;<br/>                }<br/>                resultString = &#39;Result is: &#39; + result;<br/>            } else {<br/>                resultString = &#39;Take number between &#39; + MIN_VALUE + &#39; and &#39; + MAX_VALUE + &#39;!&#39;;<br/>            }<br/>        } else {<br/>            resultString = &#39;Enter integer number!&#39;;<br/>        }<br/>    } else {<br/>        resultString = &#39;Enter valid data!&#39;;<br/>    }<br/>    document.getElementById(&#39;f-result-view&#39;).innerHTML = resultString;<br/>}</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block" id="abc" style="display: none">
+                <h4>Please enter number of symbols</h4>
+                <input type="text" size="4" id="abc-value" value="1"/>
+                <input type="button" onclick="symbols()" value="Submit">
+                    <div class="result-conteiner">
+                        <div class="result-view">
+                            <p id="abc-result-view"></p>
+                        </div>
+                        <div class="source">
+                            <pre>function symbols() {<br/><br/>    var resultString = &#39;&#39;;<br/>    var count = document.getElementById(&quot;abc-value&quot;).value;<br/><br/>    if (!isNaN(count)) {<br/>        if (parseInt(count) == parseFloat(count)) {<br/>            count = parseInt(count);<br/>            var i = 0;<br/>            while(count-- &gt; 0){<br/>                resultString += String.fromCharCode(&#39;a&#39;.charCodeAt(0) + i);<br/>                if(++i == 3) {<br/>                    i = 0;<br/>                }<br/>            }<br/>        } else {<br/>            resultString = &#39;Enter integer number!&#39;;<br/>        }<br/>    } else {<br/>        resultString = &#39;Enter valid data!&#39;;<br/>    }<br/>    document.getElementById(&#39;abc-result-view&#39;).innerHTML = resultString;<br/>}</pre>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <div class="main-block" id="dec-to-bin" style="display: none">
+                <h4>Please enter value for convert to binary</h4>
+                <p>Value: <input type="text" size="4" id="decimal-value" value="1"/>
+                <input type="button" onclick="decToBin()" value="Submit"></p>
+                <div class="result-conteiner">
+                    <div class="result-view">
+                        <p id="bin-result-view"></p>
+                    </div>
+                    <div class="source">
+                        <pre>function decToBin() {<br/><br/>    var resultString = &#39;&#39;;<br/>    var decimal = document.getElementById(&quot;decimal-value&quot;).value;<br/><br/>    if (!isNaN(decimal)) {<br/>        if (parseInt(decimal) == parseFloat(decimal)) {<br/>            decimal = parseInt(decimal);<br/>            while(decimal &gt; 0){<br/>                resultString = ((decimal % 2)?(&#39;1&#39;):(&#39;0&#39;)).concat(resultString);<br/>                decimal = parseInt(decimal / 2);<br/>            }<br/>            resultString = &#39;b&#39;.concat(resultString);<br/>        } else {<br/>            resultString = &#39;Enter integer number!&#39;;<br/>        }<br/>    } else {<br/>        resultString = &#39;Enter valid data!&#39;;<br/>    }<br/>    document.getElementById(&#39;bin-result-view&#39;).innerHTML = resultString;<br/>}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout">
+            <div id="content">
+                <h6>Homework №2</h6>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
