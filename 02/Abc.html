@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+        
+        var a="a";
+
+        var b="b";
+
+        var c="c";
+
+        var str = "";
+
+        var leng = prompt("Введите число больше 0:", 0);
+
+
+        function abc()
+        {
+            if (!isNaN(leng) && leng>0)
+            {
+                for (var i = 0; i < leng;i++)
+                {
+            
+                    if (str.charAt(str.length-1) == "" || str.charAt(str.length-1) == c)
+                    {
+                        str = str + a;
+                    }
+                    else if (str.charAt(str.length-1) == a)
+                    {
+                        str = str + b;
+                    }
+                    else
+                    {
+                        str = str + c;
+                    }
+
+                }
+                return str;
+            }
+            else
+            {
+                return "Вы ввели не число или число меньше 1";
+            }
+        }
+
+        alert(abc());
+
+    </script>
+
+</body>
+</html>
