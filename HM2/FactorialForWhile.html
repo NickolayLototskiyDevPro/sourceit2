@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+var n = prompt('Enter the number for calculate the factorial: ', '');
+var b = 1;
+while (n == 0) {
+	document.write('Factorial ' + n + ' is: 1');
+	break;
+}
+while (n < 0) {
+		document.write('Factorial of a negative number does not exist!');
+		break;
+}
+while (isNaN (n)) {
+		document.write('Error!');
+		break;
+}
+for (a = 1; a <= n; a++) {
+	b = b*a; 
+}
+document.write('Factorial ' + n + ' is - ' + b + '<br>');
+	</script>
+
+
+</body>
+</html>
