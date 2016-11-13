@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+var binar = '', a, correctBinar = '', i;
+for (b = 18; 1 <= b ; b = b/2){
+			b = parseInt(b);
+	 if (b % 2 == 0) {
+	 		binar = binar + '0';
+	 }
+	 	else {
+	 		binar = binar + '1'; 		
+	 	}
+}
+for(i = binar.length - 1; 0 <= i; i--){
+	correctBinar = correctBinar + binar[i];
+}
+console.log(correctBinar);
+</script>
+</body>
+</html>
