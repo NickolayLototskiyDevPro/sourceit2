@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Task_01</title>
+</head>
+<body>
+<script>
+	var str = 'Lorem ipsum';
+	var a = '+';
+	var b = '-';
+	var c = '*';
+	var d = '/';
+	var enterNumber = prompt('Please, enter number more 1', 100);
+
+	function strModern () {
+		if (!isNaN(enterNumber) && enterNumber > 0) { // gefinition type and range of variable
+
+			for(var i = 1; i <= enterNumber; i++){ //definition function steps 
+				if (i % 2 != 0 && i == enterNumber) { // definition parity odd of cycle
+					break;
+				}
+				else {
+						if (i % 2 == 0) { //definition parity odd of cycle
+					if (str.charAt(str.legth - 1) == 'm' || str.charAt(str.legth - 1) == d) { // found last symbol of string and add new variable
+						str = str + a;
+					}
+					else if (str.charAt(str.length - 1) == a) {
+						str = str + b;
+					}
+					else if (str.charAt(str.length - 1) == b) {
+						str = str + c;
+				}
+				else if (str.charAt(str.length - 1) == c) {
+						str = str + d;
+			}
+		}
+		else {
+			if (str.charAt(0) == 'L' || str.charAt(0) == d) { // found first symbol of string and add new variable
+                 str = a + str;
+               }
+                 else if (str.charAt(0) == a) {
+                             
+                 str = b + str;
+                             }
+                 else if (str.charAt(0) == b) {
+                             
+                 str = c + str;
+               }
+                            
+                 else if (str.charAt(0) == c) {
+                            
+                 str = d + str; 
+
+                   }
+		
+			     }
+		       }
+	        } 
+
+		return str; 
+             } 
+             else 
+             {
+             
+              return 'Unfortunately, you entered number less than 1'; 
+             }
+         }
+        alert(strModern()); 
+
+</script>
+
+</body>
+</html>

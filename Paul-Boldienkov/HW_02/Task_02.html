@@ -1,0 +1,39 @@
+<!doctype html>	
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>Task_02</title>
+</head>
+<body>
+
+</body>
+<script>
+
+ var n = prompt("Enter a number"); // variable asignment by prompt window
+        function factorial(n) {// function which  lauch factorial
+            if(!isNaN(n)) {
+            if (n < 0) {
+                return 'Entering number must be > 0';
+            }
+            if(n == 0) {
+                return 1;
+            }
+            else {                
+                var num1 = 1;
+                var i = 0;
+                while (i < n) {
+                	num1 += i * num1;
+                	i++;
+                }
+                return num1;
+            }
+        }
+        else
+        {
+        	return ('You entered not a number');
+        }
+    }
+
+        alert(factorial(n));
+</script>
+</html>
