@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add characters to the line of text</title>
+
+</head>
+<body>
+<p>Please open console</p>
+</body>
+<script>
+        var str = 'lorem ipsulum';
+        var sym = '++--**//';
+        var num = 0;
+        var i = 1;
+        do{
+            if(i%2===0){
+                str = str + sym.charAt(num);
+            }else{
+                str = sym.charAt(num) + str;
+            }
+            i++;
+            num++;
+            if(num>=sym.length){
+                sym+=sym;
+            }
+            console.log(str);
+        }while(i<=14)
+</script>
+</html>
