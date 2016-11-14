@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Home work 3</title>
+    <style>
+
+    body{
+      background: #ceedd2;
+    }
+    h2{
+      color: #537558;
+    }
+    #main input {
+      background: #809e84;
+      color: white;
+    }
+    .progr{
+      background: #8fc196;
+      color: white;
+      font-size: 20pt;
+    }
+    #main {
+      border: 4px solid #4f6853;
+      background: #b3e0ba;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .add {
+        width: 300px;
+        background: #b3e0ba;
+        color: white;
+        font-size: 20pt;
+    }
+    .binary{
+        background: #b3e0ba;
+        color: white;
+        font-size: 20pt;
+    }
+    </style>
+</head>
+<body>
+  <div>
+    <div align = "left" id = "main">
+      <h2>Task 1:</h2>
+      <div align = "center">
+        <input type = "button" class="progr" value = "Сalculate the progression" onclick = "progression()"/>
+      </div>
+    </div>
+    <div id = "main">
+      <div align = "left">
+        <h2>Task 2:</h2>
+      </div>
+      <div align = "center">
+        <input class = "add" type = "button" value = "Add symbol" onclick = "addSymbol()"/>
+      </div>
+    </div>
+    <div id = "main">
+      <div align = "left">
+        <h2>Task 3:</h2>
+      </div>
+      <div align = "center">
+        <input type = "button" class = "binary" value = "Translate to binary code" onclick = "transltToBinary()"/>
+      </div>
+    </div>
+</div>
+</body>
+
+<script>
+/* TASK 1: CALCULATE THE PROGRESSION */
+function progression(){
+var a1 = prompt("Please, enter a1:"); //input the base number to progression
+a1 = parseInt(a1); //conversion type of string in type of number
+var d = prompt("Please, enter d:");  //input the difference of progression
+d = parseInt(d);
+var n = prompt("Please, enter n:"); //input number of iterations
+n = parseInt(n);
+progress(a1, d, n );
+function progress( a1, d, n ){
+  for( var i = 0; i < n; i++){
+    console.log("a" + (i + 1) + "=" + (a1 + d*(i) ));
+  }
+}
+}
+
+/* TASK 2 : Adding a character to the end and the beginning of the line */
+
+function addSymbol(){
+var str = "string";
+var i = 0;
+var currentSymbol = "+"; //variable that will store the current symbol for iterations
+while(i < 4){  //loop to iterate through the symbols
+  var j = 0;
+  while( j<2 ){ //loop to itterate through a steps
+    if( j == 0 ){
+      str = str + currentSymbol;
+    }
+    else {
+      str = currentSymbol + str;
+    }
+    console.log(str);
+    j++;
+  }
+  if( currentSymbol == "+" ){
+    currentSymbol = "-";
+  }
+  else if( currentSymbol == "-" ){
+    currentSymbol = "*";
+  }
+  else if( currentSymbol == "*" ){
+    currentSymbol = "/";
+  }
+  i++;
+}
+}
+/* TASK 3: TRANSLATE DECIMAL NUMBER TO BINARY NUMBER */
+function transltToBinary(){
+var decNumber = prompt( "Please, enter a number:" );
+decNumber = parseInt(decNumber);
+var privateNum;
+var remainNum;
+var currentNum = decNumber;
+var str = "";
+do{
+    privateNum = (currentNum - currentNum % 2) / 2;
+    remainNum = currentNum % 2;
+    str = str + remainNum.toString();
+    currentNum = privateNum;
+} while( privateNum !== 0 )
+alert( str );
+}
+</script>
+</html>
