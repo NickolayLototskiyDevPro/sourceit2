@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body>
+
+<input type="button"  onclick="showABC()" value="abc"/>
+<script>
+
+function showABC(){
+var line = ''
+var one = 'a';
+var two = 'b';
+var three = 'c';
+var output = +prompt('Enter the number of calculations', '');
+for (i = 0; i <= (output - 1); i++) {
+
+if(line.length === 0){
+  line = one; /*add first letter*/
+}
+else if(line[line.length-1] == 'a'){  /*know the first letter and the subsequent changf*/
+    line = line + two;
+}
+else if(line[line.length-1] == 'b'){
+    line = line + three;
+}
+else if(line[line.length-1] == 'c'){
+    line = line + one;
+}
+console.log(line)
+}
+}
+</script>
+</body>
+</html>

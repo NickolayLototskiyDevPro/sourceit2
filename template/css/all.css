@@ -362,12 +362,12 @@ a, ins {
 }
 .portfolio_block .img_block_wrapper{
 	width: 100%;
-	height: 655px;
+	min-height: 600px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-bottom: 25px;
-	/* background: red; */
+	padding-bottom: -20px;
+	border: 1px solid red;
 }
 .portfolio_block .img_block_wrapper .t2{
 	/* background: blue; */
