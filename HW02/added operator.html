@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>var str = 'lorem ipsulum';
+        var m = '++--//**';
+        var n = 0;
+        var i = 1;
+        do{
+            if(i%2===1){
+                str = m.charAt(n) + str;
+            }else{
+                str = str + m.charAt(n);
+            }
+            ++i;
+            ++n;
+            if(n>=m.length){
+                m+=m;
+            } else if(i%2===1){
+                console.log(str)
+            };
+        }while(i<20)
+    </script>
+</body>
+</html>
