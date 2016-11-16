@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        function calculate(a,b,operation) {
+
+            switch (operation) {
+                case "+":
+                    alert(+a + +b);
+                    break;
+                case "-":
+                    alert(a - b);
+                    break;
+                case "/":
+                    if (b != 0) {
+                        alert(a / b);
+                    }
+                    else {
+                        alert("Деление на 0 невозможно.")
+                    }
+                    break;
+                case "*":
+                    alert(a * b);
+                    break;
+                default:
+                    alert('Вы ввели не верную операцию');
+            }
+
+        }
+     
+        function EnterValues() {//to enter numbers Function
+           var a = prompt("Введите первое значение");
+           var b = prompt("Введите второе значение");
+           var operation = prompt("Введите операцию которую надо выполнить +, -, /, *");
+            if (!isNaN(a) && !isNaN(b))//the number of checks
+            {
+                calculate(a, b, operation);
+            }
+            else {
+                alert("Не число");
+            }
+            
+        }
+
+        EnterValues();
+    </script>
+</body>
+</html>

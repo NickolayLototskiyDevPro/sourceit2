@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        
+
+        function advance(number, count, step) //the function of the arithmetic progression
+        {         
+                var endsum=number + (step - 1) * count;
+
+                var sum = number;
+
+                var sumprogr = number;
+
+                for (var i = 1; i < step; i++)
+                {
+                     sum=sum+count;
+                     sumprogr = sumprogr + sum;
+                }
+                return  "Последний член: "+ endsum +" Сумма арифметической прогрессии: "+sumprogr;
+           
+
+        }
+           
+        function EnterValues() //to enter numbers Function
+        {
+           var number = +prompt("Введите член прогрессии",0);
+           var count = +prompt("Введите шаг прогрессии",0);
+           var step = +prompt("Введите номер последнего члена n:",0);
+            if (!isNaN(number) && !isNaN(count) && !isNaN(step)) //the number of checks
+            {
+                alert(advance(number,count,step));
+            }
+            else
+            {
+                alert("Вводите только числа");
+            }
+        }
+
+        EnterValues();
+
+    </script>
+
+</body>
+</html>
