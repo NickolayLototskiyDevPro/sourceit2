@@ -67,6 +67,7 @@ a.button{
     text-decoration: none;
     user-select: none;
     padding: .5em 1.8em;
+    margin: 10px;
     outline: none;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 2px;
@@ -107,6 +108,34 @@ sub {
 }
 .nav-portofolio li a:hover, .nav-portofolio li a.active {
     color: #333;
+}
+
+.error {
+    color: #DF3720;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 10px;
+    padding: 0;
+}
+
+
+.input {
+    width: 120px;
+    display: inline-block;
+    margin: 10px;
+}
+.input > input {
+    width: 100%;
+    text-align: right;
+}
+.input > p {
+    font-size: 12px;
+    text-align: center;
+    margin: 5px;
+}
+.submit {
+    display: block;
+    margin: 5px 10px;
 }
 
 /* main */

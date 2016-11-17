@@ -15,7 +15,71 @@
 		<header>
 	 		<h1>Homework №04</h1>
 		</header>
-
+		<div class="main-contant">
+			<ul class="nav-portofolio tabs_menu">
+				<li><a href="task1" class="active">Задание 1</a></li>
+				<li>/</li>
+				<li><a href="task2">Задание 2</a></li>
+				<li>/</li>
+				<li><a href="task3">Задание 3</a></li>
+				<li>/</li>
+				<li><a href="task4">Задание 4</a></li>
+			</ul>
+			<div id="tab1" class="tab">
+				<div id="task1" class="task">
+					<h3>Задание 1</h3>
+					<p>Функция вычисления геометрической прогрессии</p>
+					<form>
+						<div class="input">
+							<p>start</p>
+							<input type="text" name="start">
+						</div>
+						<div class="input">
+							<p>step</p>
+							<input type="text" name="step">
+						</div>
+						<div class="input">
+							<p>finish</p>
+							<input type="text" name="finish">
+						</div>
+<!-- 						<p class="error" id="errorTaskOne">Эти поля необходимо заполнить.</p> -->
+					</form>
+					<a href="#" class="button" onclick='getInput(1)'>Вычислить(1)</a>
+					<a href="#" class="button" onclick='getInput(0)'>Вычислить(2)</a>
+					<p class="res">Результат:<span id="stringTaskOne" class="string">empty</span></p>
+					
+				</div>
+				<div id="task2" class="task">
+					<h3>Задание 2</h3>
+					<p>1) Вычисление факториала с помощью цикла "while".</p>
+					<p class="press">Нажмите кнопку</p>
+					<a href="#" class="button" onclick='solveFactorialWhile()'>Go!</a>
+					<p id="stringTaskTwoWhile" class="string">empty</p>
+					<p>2) Вычисление факториала с помощью цикла "for".</p>
+					<p class="press">Нажмите кнопку</p>
+					<a href="#" class="button" onclick='solveFactorialFor()'>Go!</a>
+					<p id="stringTaskTwoFor" class="string">empty</p>
+				</div>
+				<div id="task3" class="task">
+					<h3>Задание 3</h3>
+					<p>1) Вычисление арифметической прогрессии для суммы с помощью цикла "for".</p>
+					<p class="press">Нажмите кнопку</p>
+					<a href="#" class="button" onclick='arithmProgrFor()'>Go!</a>
+					<p id="stringTaskThreeFor" class="string">empty</p>
+					<p>2) Вычисление арифметической прогрессии для суммы по формуле n*(n+1)/2.</p>
+					<p class="press">Нажмите кнопку</p>
+					<a href="#" class="button" onclick='arithmProgrFormula()'>Go!</a>
+					<p id="stringTaskThreeFormula" class="string">empty</p>
+				</div>
+				<div id="task4" class="task">
+					<h3>Задание 4</h3>
+					<p>Скрипт литерации символов 'a', 'b', 'c'.</p>
+					<p class="press">Нажмите кнопку</p>
+					<a href="#" class="button" onclick='getLiter()'>Go!</a>
+					<p id="stringFour" class="string">empty</p>
+				</div>
+			</div>
+		</div>
 		<footer>
 			<div class="copyright">
 				<span class="year">© 2016</span>
