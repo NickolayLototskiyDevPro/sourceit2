@@ -109,23 +109,22 @@ sub {
 .nav-portofolio li a:hover, .nav-portofolio li a.active {
     color: #333;
 }
-
-.error {
-    color: #DF3720;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0 10px;
-    padding: 0;
+.attention {
+    margin: 0 0 10px;
 }
-
-
+.attention>i {
+    font-size: 14px;
+    color: #c03232;
+}
 .input {
+    position: relative;
     width: 120px;
+    height: 85px;
     display: inline-block;
-    margin: 10px;
+    margin: 0 10px;
 }
 .input > input {
-    width: 100%;
+    width: 100px;
     text-align: right;
 }
 .input > p {
@@ -133,11 +132,35 @@ sub {
     text-align: center;
     margin: 5px;
 }
+.input.but {
+    height: auto;
+}
+.input [type="button"] {
+    text-align: center;
+    width: auto;
+}
 .submit {
     display: block;
     margin: 5px 10px;
 }
-
+.error {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    color: #DF3720;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+.select {
+    display: inline-block;
+    margin: 0 10px;
+}
+.select select {
+    width: 50px;
+}
 /* main */
 
 /*footer*/
