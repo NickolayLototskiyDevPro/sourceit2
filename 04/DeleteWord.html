@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        var masstr = "какое то предложение из нескольких слов";
+
+
+        function deletWord(str) {//with vstroennyii methods function
+
+        var arr = str.split(" ");
+        arr.pop();
+        arr.shift();
+        return str = arr.join(" ");
+        }
+
+
+        function deletWord1(str) {
+
+            var mass = [];
+
+            var arr = str.split(" ");
+            
+           
+            for (var key in arr) {
+
+                if (parseInt(key) === 0 || parseInt(key) === arr.length-1) {
+                    continue;
+                }
+                else {
+                    mass.push(arr[key]);
+                }
+            }
+            return str = mass.join(" ");
+        }
+
+
+        alert(deletWord1(masstr));
+
+    </script>
+</body>
+</html>

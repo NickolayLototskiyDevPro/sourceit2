@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+       
+
+
+        function palindrome(str) {
+
+            var arrstr = str.split("");
+
+            var mass = [];
+
+            for (var key in arrstr) {
+
+                mass.unshift(arrstr[key]);
+            }
+
+            var str2 = mass.join("");
+
+            if (str === str2) {
+                alert("Слово полиндром");
+            }
+            else {
+                alert("Слово не полиндром");
+            }
+        }
+
+        palindrome(prompt("Введите слово что бы проверить полиндром или нет"));
+       
+
+    </script>
+</body>
+</html>

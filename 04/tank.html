@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+   
+</head>
+<body>
+    <script type="text/javascript">
+
+        var tank = {
+            "wheel": 8,
+            "trunk": 125,
+            "ammunition": "armor-piercing",
+            "gun": {
+                "length": 10,
+                "size": 2
+            },
+            "engine": {
+                "cylinders": 8,
+                "size": 12,
+                "fuel": "Diesel"
+            },
+            "caterpillar": ["1","2"]
+        };
+    
+
+        for (var key in tank) {
+       
+                if (typeof tank[key] == "object") {
+                    for (var key2 in tank[key])
+                        console.log(key + " : " + key2 + " : " + tank[key][key2]);                 
+                }
+                else {
+                    console.log(key + " : " + tank[key]);
+                }
+        }           
+       
+    </script>
+</body>
+</html>

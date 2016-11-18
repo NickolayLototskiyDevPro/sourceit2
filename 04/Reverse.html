@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <script type="text/javascript">
+   
+        function reverse(revstr) {
+
+            var arr = revstr.split("");
+
+            var a=[];
+
+            for(var key in arr){
+
+                a.unshift(arr[key]);
+            }
+
+           return revstr = a.join("");
+
+        }
+
+        var str = prompt("Введите слово:");
+
+        alert(reverse(str));
+
+        </script>
+</body>
+</html>

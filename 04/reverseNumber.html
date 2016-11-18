@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+       var massnumber = [63, 2, 3, 5, 7, 9, 11, 27, 4, 8, 88, 2, 125];
+
+       function reverseNumber(arr) {
+
+           var mass = [];
+
+           for (var key in arr) {
+
+               mass.unshift(arr[key]);
+           }
+           return mass;
+       }
+        
+        massnumber=reverseNumber(massnumber)
+
+        alert(massnumber);
+
+    </script>
+</body>
+</html>
