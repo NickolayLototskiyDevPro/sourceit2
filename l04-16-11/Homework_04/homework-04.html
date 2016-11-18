@@ -50,7 +50,7 @@
 							<input type="button" id="com1" value="Вычислить">
 						</div>
 					</form>
-					<p class="res">Результат:<span id="stringTaskOne" class="string">empty</span></p>
+					<p class="res">Результат:<span id="resultTaskOne" class="string">empty</span></p>
 				</div>
 				<div id="task2" class="task">
 					<h3>Задание 2</h3>
@@ -65,7 +65,7 @@
 							<input type="button" id="com2" value="Применить">
 						</div>
 					</form>
-					<p class="res">Результат:<span id="stringTaskTwo" class="string">empty</span></p>
+					<p class="res">Результат:<span id="resultTaskTwo" class="string">empty</span></p>
 				</div>
 				<div id="task3" class="task">
 					<h3>Задание 3</h3>
@@ -73,11 +73,12 @@
 					<form class="form3">
 						<div class="input">
 							<p>число</p>
-							<input type="text" name="start" value='' maxlength="6">
+							<input type="text" name="number" value='' maxlength="9">
 							<span class="error errorForm3"></span>
 						</div>
 						<div class="select">
-							<select name="sign">
+							<p>выберите</p>
+							<select name="sign" id="sign">
 								<option value="plus" selected>+</option>
 								<option value="min">-</option>
 								<option value="mul">&#215;</option>
@@ -86,21 +87,28 @@
 						</div>
 						<div class="input">
 							<p>число</p>
-							<input type="text" name="step" value='' maxlength="6">
+							<input type="text" name="number" value='' maxlength="9">
 							<span class="error errorForm3"></span>
 						</div>
 						<div class="input but">
 							<input type="button" id="com3" value="Вычислить">
 						</div>
 					</form>
-					<p class="res">Результат:<span id="stringTaskThree" class="string">empty</span></p>
+					<p class="res">Результат:<span id="resultTaskThree" class="string">empty</span></p>
 				</div>
 				<div id="task4" class="task">
 					<h3>Задание 4</h3>
-					<p>Скрипт литерации символов 'a', 'b', 'c'.</p>
+					<p>Сделать счетчик с заданым шагом отрабатывающий по клику на кнопку</p>
+					<form class="form4">
+						<div class="input">
+							<p>укажите шаг</p>
+							<input type="text" name="number" value='' maxlength="9">
+							<span class="error errorForm4"></span>
+						</div>
+					</form>
+					<p class="res">Результат:<span id="resultTaskFour" class="string">empty</span></p>
 					<p class="press">Нажмите кнопку</p>
-					<a href="#" class="button" onclick='getLiter()'>Go!</a>
-					<p id="stringFour" class="string">empty</p>
+					<a href="#" class="button" id="com4">Go!</a>
 				</div>
 			</div>
 		</div>

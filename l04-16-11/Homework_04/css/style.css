@@ -157,10 +157,21 @@ sub {
 .select {
     display: inline-block;
     margin: 0 10px;
+    height: 85px;
 }
 .select select {
-    width: 50px;
+    width: 65px;
 }
+.select p {
+    font-size: 12px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+
+
+
 /* main */
 
 /*footer*/
