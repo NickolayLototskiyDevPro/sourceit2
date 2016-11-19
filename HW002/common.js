@@ -4,17 +4,22 @@ function lorem() {
 	var	string = 'lorem';
 	var pre = '!!##$$%%**++';
 	var i = prompt('write number iteration what you need',0);//what the start of the period
+	num = 0;
 
 	do {
-		if ( i & 1) {
-			string = pre.charAt(i) + string;//adding to a string of characters
-			alert(string);
+		if ( i%2===0) {
+			string = pre.charAt(num) + string;//adding to a string of characters
 		} else {
-			string = string + pre.charAt(i);//adding to a string of characters
-			alert(string);
+			string = string + pre.charAt(num);//adding to a string of characters
 		}
+
+		num++;
 		i++;
-	} while ( i < pre.length ); // without the risk of including more of the string
+		if(num>=pre.length) {
+			pre+=pre;
+		}
+		alert(string);
+	} while ( i < 20 ); // without the risk of including more of the string
 
 };
 
