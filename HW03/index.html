@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="all.css" type="text/css"/>
+    <script type="text/javascript" src="main.js"></script>
+    <title>Home work 03</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="layout">
+            <h1 class="logo"><a href="http://sourceit.com.ua/it-courses/kursy-javascript/">JS FRONT-END</a></h1>
+            <ul class="nav">
+                <li><a href="#" onclick="pageSelect('progression')">Geometric progression</a></li>
+                <li><a href="#" onclick="pageSelect('exclamation')">Exclamation point</a></li>
+                <li><a href="#" onclick="pageSelect('computation')">Computation function</a></li>
+                <li><a href="#" onclick="pageSelect('increment')">Increment the number</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="layout">
+            <div class="main-block" id="intro" style="display: block">
+                <h4>Please make You choice</h4>
+            </div>
+            <div class="main-block" id="progression" style="display: none">
+                <h2 class="menu-name" align="center">Geometric progression</h2>
+                    <div class="source">
+                        <pre>function isValidInteger(tagId){<br/>    var checkingValue = document.getElementById(tagId).value;<br/>    if (!isNaN(checkingValue)) {<br/>        if (parseInt(checkingValue) == parseFloat(checkingValue)) {<br/>            document.getElementById(tagId).style.backgroundColor = &#39;white&#39;;<br/>            return parseInt(checkingValue);<br/>        }<br/>    }<br/>    document.getElementById(tagId).style.backgroundColor = &#39;red&#39;;<br/>    return false;<br/>}<br/><br/>function progression(){<br/>    var start = isValidInteger(&#39;progression-start&#39;);<br/>    var step = isValidInteger(&#39;progression-step&#39;);<br/>    var maximum = isValidInteger(&#39;progression-end-value&#39;);<br/>    var resultString = &#39;&#39;;<br/>    <br/>    if (start &amp;&amp; step &amp;&amp; maximum &amp;&amp; <br/>        Math.abs (start) &gt; 0 &amp;&amp; Math.abs (step) &gt; 0 &amp;&amp; Math.abs (maximum) &gt; 0){<br/>            if (Math.sign(start) == Math.sign(maximum) ||  Math.sign(step) == -1){<br/>                resultString = start;<br/>                var n = start;<br/>                while (Math.abs (n * step) &lt;= Math.abs (maximum)){<br/>                    n *= step;<br/>                    resultString += &#39;, &#39; + n;<br/>                }<br/>            } else {<br/>                alert (&#39;No result!&#39;);<br/>            }<br/>    } else {<br/>        alert (&#39;Input values seems wrong!&#39;);<br/>    }<br/>    document.getElementById(&#39;a-result-view&#39;).innerHTML = resultString;<br/>}</pre>
+                    </div>
+                <h4>Please enter progression parameters</h4>
+                <p>Start value:&nbsp;
+                    <input type="text" size="3" id="progression-start" value="1"/>
+                </p>
+                <p>Step value:&nbsp;
+                <input type="text" size="3" id="progression-step" value="2"/>
+                </p>
+                <p>Maximum:&nbsp;
+                    <input type="text" size="3" id="progression-end-value" value="10"/>
+                </p>
+                <input type="button" onclick="progression()" value="Submit">
+                <div class="result-conteiner">
+                    <div class="result-view">
+                        <p id="a-result-view"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block" id="exclamation" style="display: none">
+                <h2 class="menu-name" align="center">Exclamation point</h2>
+                    <div class="source">
+                        <pre>function appendExclamation(text) {<br/>    return &#39;!&#39; + text + &#39;!&#39;;<br/>}<br/><br/>function exclamation() {<br/>    var text = document.getElementById(&#39;exclamation-value&#39;).value;<br/>    document.getElementById(&#39;exclamation-result-view&#39;).innerHTML = appendExclamation(text);<br/>}<br/></pre>
+                    </div>
+                <h4>Please enter some text</h4>
+                <input type="text" size="20" id="exclamation-value" value="some text"/>
+                <input type="button" onclick="exclamation()" value="Submit">
+                <div class="result-conteiner">
+                    <div class="result-view">
+                        <p id="exclamation-result-view"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block" id="computation" style="display: none">
+                <h2 class="menu-name" align="center">Computation function</h2>
+                <div class="source">
+                    <pre>function calculate(value1, value2, method){<br/>    var resultString = &#39;&#39;;<br/><br/>    if (!isNaN(value1) &amp;&amp; !isNaN(value2)){<br/>		switch (method){<br/>			case &#39;+&#39;:{<br/>				resultString = value1 + value2;<br/>				break;<br/>			}<br/>			case &#39;-&#39;:{<br/>				resultString = value1 - value2;<br/>				break;<br/>			}<br/>			case &#39;*&#39;:{<br/>				resultString = value1 * value2;<br/>				break;<br/>			}<br/>			case &#39;/&#39;:{<br/>				resultString = value1 / value2;<br/>				break;<br/>			}<br/>			default:{<br/>				resultString = &#39;Enter one of the following operators: +, -, *, /&#39;;<br/>			}<br/>		}<br/>	} else {<br/>		resultString = &#39;Enter valid integer data!&#39;;<br/>	}<br/>	return resultString;<br/>}<br/><br/>function computation() {<br/>    var value1 = isValidInteger(&#39;computation-value1&#39;);<br/>    var value2 = isValidInteger(&#39;computation-value2&#39;);<br/>    var method = document.getElementById(&#39;computation-method&#39;).value;<br/>    <br/>    document.getElementById(&#39;computation-result-view&#39;).innerHTML = calculate(value1, value2, method);<br/>}</pre>
+                </div>
+                <h4>Please enter values and operator for compute</h4>
+                <p>First value:&nbsp;
+                    <input type="text" size="3" id="computation-value1" value="1"/>
+                </p>
+                <p>Second value:&nbsp;
+                    <input type="text" size="3" id="computation-value2" value="2"/>
+                </p>
+                <p>Arithmetical method:&nbsp;
+                    <input type="text" size="3" id="computation-method" value="+"/>
+                </p>
+                <input type="button" onclick="computation()" value="Submit">
+                <div class="result-conteiner">
+                    <div class="result-view">
+                        <p id="computation-result-view"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block" id="increment" style="display: none">
+                <h2 class="menu-name" align="center">Increment the number</h2>
+                <div class="source">
+                    <pre>function isValidInteger(tagId){<br/>    var checkingValue = document.getElementById(tagId).value;<br/>    if (!isNaN(checkingValue)) {<br/>        if (parseInt(checkingValue) == parseFloat(checkingValue)) {<br/>            document.getElementById(tagId).style.backgroundColor = &#39;white&#39;;<br/>            return parseInt(checkingValue);<br/>        }<br/>    }<br/>    document.getElementById(tagId).style.backgroundColor = &#39;red&#39;;<br/>    return false;<br/>}<br/><br/>function increment(){<br/>    var value = isValidInteger(&#39;increment-value&#39;);<br/><br/>    if (!isNaN(value) &amp;&amp; value !== false){<br/>        alert(++value);<br/>    }<br/>}</pre>
+                </div>
+                <h4>Please enter the number</h4>
+                <p>Number:&nbsp;
+                    <input type="text" size="3" id="increment-value" value="1"/>
+                    <input type="button" onclick="increment()" value="Submit">
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout">
+            <div id="content">
+                <h6 style="float: left">Homework №3</h6>
+                <div style="display: inline-block; float: right">
+                    <h6>Aleksey Vasilevskiy / 2016</h6>
+                </div
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
