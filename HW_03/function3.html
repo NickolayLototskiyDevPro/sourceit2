@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	
+	   <style>
+	   div{
+	     height: 50px;
+	  }
+	   
+	   </style> 
+</head>
+<body>
+
+	<div>
+	   <p>Первое число</p>
+		<input type="text" id="firstValue" placeholder="0">
+	</div>
+	<div>
+	   <p>Операция +-/*</p>
+		<input type="text" id="operator" placeholder="+-/*">
+	</div>
+	<div>
+	    <p>Второе число</p>
+		<input type="text" id="secondValue" placeholder="0">
+		</div>
+	<div>
+	    <p id="answer"></p>
+		</div>
+	<div>
+	    <input type="submit" onclick="myFunction()" value="Посчитать">
+	</div>
+	<script>
+    function myFunction(){
+    	var firstValue =  +document.getElementById('firstValue').value;
+    	var secondValue =  +document.getElementById('secondValue').value;
+    	var operator =  document.getElementById('operator').value;
+    	var output;
+        if(isNaN(firstValue) || isNaN(secondValue)){
+        	alert('Вводите числа');
+        }
+        else if(secondValue == 0 && operator == '/'){
+        	alert('На 0 делить нельзя');
+        }
+        else {switch(operator){
+             case '+' : output = firstValue + secondValue;
+             case '-' : output = firstValue - secondValue;
+             case '/' : output = firstValue / secondValue;
+             case '*' : output = firstValue * secondValue;
+             
+             }
+        }
+       document.getElementById('answer').innerHTML = output;
+    }
+    </script>
+</body>
+</html>

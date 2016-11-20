@@ -5,19 +5,18 @@
 	<title>Document</title>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
-<input type="button"  onclick="progressionA()" value="progression"/>
 <body>
-	
 	<script>
-	function progressionA(){
-		var i, output = 1;
-		var step = +prompt('Enter step progression','')
-for (i = 0; i <= 20; i++){
-	
-	output = output + step;
-document.write(output + "; ")
-}
-}
+	var line = 'lorem';
+        var plus = '!!@@##$$%%^^&&**';
+        for(var i = 1; i < 20; i++){
+            if(i % 2 !== 0){
+                line = line + plus.charAt(i);}
+            else{
+                line = plus.charAt(i) + line;
+            }
+            console.log(line); 
+        }
 	</script>
 </body>
 </html>

@@ -343,18 +343,16 @@ a, ins {
 .portfolio_block .tabs{
 	text-indent: 1px;
 	margin-left: 5px;
+	
+}
+.portfolio_block .tabs a{
 	color: #a7a7a7;
 }
-.portfolio_block .tabs a:nth-of-type(1),
-.portfolio_block .tabs a:nth-of-type(3),
-.portfolio_block .tabs a:nth-of-type(5){
+.portfolio_block .tabs a:hover{
 	color: #a7a7a7;
-}
-.portfolio_block .tabs a:nth-of-type(1):visited,
-.portfolio_block .tabs a:nth-of-type(3):visited,
-.portfolio_block .tabs a:nth-of-type(5):visited{
 	color: black;
-}
+}   
+
 .portfolio_block .tabs li{
 	display: inline-block;
 	margin-bottom: 41px;
@@ -362,15 +360,12 @@ a, ins {
 }
 .portfolio_block .img_block_wrapper{
 	width: 100%;
-	min-height: 600px;
+	min-height: 650px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-bottom: -20px;
-	border: 1px solid red;
-}
-.portfolio_block .img_block_wrapper .t2{
-	/* background: blue; */
+	padding-bottom: 20px;
+	
 }
 .img_container{
     /* Как должны быть выражены 3D эффекты */
@@ -421,6 +416,7 @@ a, ins {
     height: 40px;
     background: url("../img/eye.png") 50% 50% no-repeat;
     margin: 0 auto;
+
 }
 .img_container:hover .img_front{
     /*Когда на контейнер происходит наведение мышкой и срабатывает hover, повернуть переднюю часть и спрятать её */
@@ -436,6 +432,7 @@ a, ins {
 	font-weight: 600;
 	font-size: 18px;
 	text-indent: 4px;
+
 }
 .portfolio_block_bottom_block h3{
 	font-weight: 700;

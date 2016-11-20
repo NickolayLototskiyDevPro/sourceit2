@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body>
+	<script>
+     function showProgression( start, step, output){
+    	
+    	for(i = 0; i <= output - 1; i++){
+         start = start + step;
+        document.write(start + "; ")
+    	}
+    }
+
+	    var start = +prompt('Enter start number','0');
+    	var step = +prompt('Enter step number','0');
+    	var output = +prompt('Enter line number','0');
+     
+		showProgression(start, step, output);
+
+
+
+
+
+
+	</script>
+    
+</body>
+</html>
