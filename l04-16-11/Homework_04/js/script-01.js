@@ -115,8 +115,8 @@ function calculator() {
 	var arr = [];
 
 	for (var i = 0; i < numbers.length; i++) {
-		if ( !isNaN(parseFloat(numbers[i].value)) && isFinite(numbers[i].value) ) {
-			var n = +numbers[i].value.replace(',', '.');
+		var n = numbers[i].value.replace(',', '.');
+		if ( !isNaN(parseFloat(n)) && isFinite(n) ) {
 			arr.push(+n);
 			errors[i].innerHTML = 'Число принято';
 		} else {
@@ -157,10 +157,10 @@ function counter() {
 	var number = document.forms[3].elements[0];
 	var errors = document.querySelector('span.errorForm4');
 	var res = document.getElementById('resultTaskFour');
-	var num = number.value;
+	var num = number.value.replace(',', '.');
 
 	if ( !isNaN(parseFloat(num)) && isFinite(num) ) {
-		num = +num.replace(',', '.');
+		num = +num;
 		if (num <= 0) {
 			number.value = '';
 			res.innerHTML = 'empty';
