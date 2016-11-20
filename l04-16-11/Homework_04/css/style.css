@@ -135,7 +135,7 @@ sub {
 .input.but {
     height: auto;
 }
-.input [type="button"] {
+input[type="button"] {
     text-align: center;
     width: auto;
 }
