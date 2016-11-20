@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plus num</title>
+</head>
+<body>
+    <input id="num" type="text" name="Number" value ="1">
+    <button onclick="plusNum()">OK</button>
+</body>
+<script>
+    function plusNum() {
+        var num = parseInt(document.getElementById('num').value, 10);
+        if(!isNaN(num)){
+            alert (num+=num)
+        }else{
+            alert('Please enter the number!')
+        }
+    }
+</script>
+
+</html>

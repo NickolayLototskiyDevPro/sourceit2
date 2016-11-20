@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сalculator</title>
+</head>
+<body>
+
+</body>
+<script>
+    function calcFigures(num1, num2, sing) {
+        if(!isNaN(num1) && !isNaN(num2)){
+            switch(sing){
+                case '+': return num1+num2;
+                    break;
+                case '-': return num1-num2;
+                    break;
+                case '*': return num1*num2;
+                    break;
+                case '/': return num1/num2;
+                    break;
+            }
+        }else{
+            return false;
+        }
+    }
+    console.log(calcFigures(25, 5, '/'))
+</script>
+</html>
