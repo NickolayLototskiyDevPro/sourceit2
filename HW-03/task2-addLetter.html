@@ -1,0 +1,23 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+  </head>
+  <body>
+<script>
+  var str = "12345";
+  var symbols = [ "a", "b", "c" ];
+  var x = 0;
+  for( var i = 0; i <= 8; i++ ){
+    for( x = 0; x < 3; x++ ){
+      str = str + symbols[x];
+      if( x > 2 ){
+        x = 0;
+        }
+      }
+        x = x + 1;
+    }
+  console.log(str);
+</script>
+</body>
+</html>

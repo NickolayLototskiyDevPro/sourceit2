@@ -1,0 +1,37 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+    <style>
+      .inout{
+        text-align: center;
+      }
+      .in{
+        height: 100px;
+        width: 300px;
+      }
+      .out{
+        height: 100px;
+        width: 300px;
+      }
+      .click{
+        height: 100px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class = "inout">
+      <input id = "ab" class = "in" type = "edit" ></input>
+      <input id = "cd" class = "click" type = "submit" value="OK" onclick="outputNum()"></input>
+      <input id = "ef" class = "out" type = "edit"></input>
+    </div>
+  </body>
+  <script>
+    function outputNum(){
+      var x = document.getElementById("ab");
+      var y = document.getElementById("ef");
+    }
+    outputNum();
+  </script>
+</html>

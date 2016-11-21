@@ -1,0 +1,23 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+  </head>
+<script>
+function progression(){
+var a1 = prompt("Please, enter a1:"); //input the base number to progression
+a1 = parseInt(a1); //conversion type of string in type of number
+var d = prompt("Please, enter d:");  //input the difference of progression
+d = parseInt(d);
+var n = prompt("Please, enter n:"); //input number of iterations
+n = parseInt(n);
+progress(a1, d, n );
+function progress( a1, d, n ){
+  for( var i = 0; i < n; i++){
+    console.log("a" + (i + 1) + "=" + (a1 + d*(i) ));
+  }
+}
+}
+progression();
+</script>
+</html>

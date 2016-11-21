@@ -1,0 +1,39 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 1</title>
+  </head>
+<body>
+<script>
+  var tank = {
+      gun: {
+          name: "M256",
+          wheel: 2,
+          trunk: 1,
+          caliber: 125,
+          shells: 100
+        },
+      towers: 2,
+      tracks: ["track1", "track2"],
+      engine: {
+          name: "T-90",
+          cylinder: 12,
+          volume: 90,
+          fuel: "diesel"
+        }
+      }
+  function readObj(obj){
+  for(var key in obj) {
+    if(typeof(obj[key]) == "object"){
+      console.log(key);
+      readObj(obj[key]);
+    }
+    else {
+    console.log(key + ":" + obj[key]);
+      }
+    }
+  }
+readObj(tank);
+</script>
+</body>
+</html>

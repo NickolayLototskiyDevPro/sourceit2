@@ -1,0 +1,23 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+  </head>
+  <body>
+<script>
+var newArr = ["one", "two", "three", "four", "five"];
+  function deleteWords(arr){
+    while( arr.length > 2 ){
+      var x = [];
+      x.push(arr[0]);
+      for( var i = 2; i < arr.length; i++){
+        x.push(arr[i]);
+      }
+      arr = x;
+    }
+    console.log(arr);
+  }
+  deleteWords(newArr);
+</script>
+</body>
+</html>

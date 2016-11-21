@@ -1,0 +1,20 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+  </head>
+<body>
+<script>
+  var newArr = ["one", "two", "three", "four", "five"];
+  function backIterat(arr){
+    var x = [];
+    for( var i = arr.length - 1; i >= 0; --i){
+      x.push(arr[i]);
+      }
+      return x;
+    }
+  newArr = backIterat(newArr);
+  console.log(newArr);
+</script>
+</body>
+</html>
