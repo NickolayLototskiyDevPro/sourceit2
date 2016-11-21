@@ -14,6 +14,7 @@ $(document).ready(function($) {
 window.onload = init;
 
 function init() {
+	var com1 = document.getElementById('com1');
 	var com2 = document.getElementById('com2');
 	var com3 = document.getElementById('com3');
 	var com4 = document.getElementById('com4');
@@ -23,6 +24,7 @@ function init() {
 	var com8 = document.getElementById('com8');
 	var com9 = document.getElementById('com9');
 
+	com1.onclick = getObjectTank;
 	com2.onclick = getRev;
 	com3.onclick = getEven;
 	com4.onclick = getMatrix;
@@ -35,9 +37,85 @@ function init() {
 
 //*******************************start task1******************************
 
+var Leopard_2А7 = {
+	name: 'Leopard_2А7',
+	country: 'Germany',
+	crew: '4 men',
+	'dimensions weight': {
+		weight: '67.5 t',
+		'length gun forward': '10.97 m',
+		'hull length': '7.7 m',
+		width: '4 m',
+		height:	'~ 3 m'
+	},
+	armament: {
+		'main gun': '120-mm smoothbore',
+		'machine guns': '1 x 12.7-mm, 1 x 7.62-mm',
+		'elevation range': '- 9 to + 20 degrees',
+		'traverse range': '360 degrees'
+	},
+	'main gun': '42 rounds',
+	mobility: {
+		engine:	'MTU MB-837 Ka501 diesel',
+		'engine power':	'1 500 hp',
+		'maximum road speed':	'72 km/h',
+		range:	'450 km'
+	},
+	started: false,
 
+	start: function() {
+		this.started = true;
+	},
 
+	stop: function() { 
+	 	this.started = false;
+	},
 
+	drive: function() {
+		if (this.started) { 
+			console.log(this.name + " goes gone!"); 
+		} else { 
+			console.log("Start the engine first."); 
+		}
+	}
+};
+
+var depth = 0;
+var delta = '';
+var deltastep = '             ';
+var showobj_p='';
+
+function showObj(obj,oname){
+	if(typeof(obj) == 'object'){
+		showobj_p += '\n' + delta + oname + ' {';
+		depth++; delta = '';
+		for(var g = 0; g < depth; g++){
+			delta += deltastep;
+		}
+		for(var i in obj){
+			if( obj[i] == '[object Object]' ){
+				showObj(obj[i], oname + '.' + i);
+			}
+			showobj_p += '\n' + delta + oname + '.' +i;
+			showobj_p += ' = ' + obj[i];
+		}
+		depth--; delta='';
+		for(var g = 0; g < depth; g++){
+			delta += deltastep;
+		}
+		showobj_p += '\n' + delta + '}';
+	}else{
+		console.log('It is not an object!');
+	}
+};
+
+function getObjectTank() {
+	var res = document.getElementById('resultTaskOne');
+
+	showObj(Leopard_2А7, 'Leopard_2А7');
+
+	return res.innerHTML = '<pre> ' + showobj_p + '</pre>';
+};
 
 
 //*******************************start task2***************************
