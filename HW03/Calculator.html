@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Страница</title>
+<meta charset="utf-8">    
+    <script>
+        function retCount() {
+            var a = Number(document.getElementById("value1").value);
+            var b = Number(document.getElementById("value2").value);
+            var oper = document.getElementById("operation").value;
+            var status = document.getElementById("status");
+            var res = 0;
+            switch (oper) {
+              case '+':
+                if ( !isNaN(a) && !isNaN(b) ){
+                    res = a + b;
+                    return status.innerHTML = res;
+                }else {
+                    return status.innerHTML =  'Enter the number!';
+                }
+                break;
+              case '-':
+                if ( !isNaN(a) && !isNaN(b) ){
+                    res = a - b;
+                    return status.innerHTML = res;
+                }else {
+                    return status.innerHTML =  'Enter the number!';
+                }
+                break;
+              case '*':
+                if ( !isNaN(a) && !isNaN(b) ){
+                    res = a * b;
+                    return status.innerHTML = res;
+                }else {
+                    return status.innerHTML =  'Enter the number!';
+                }
+                break;
+              case '/':
+                if ( !isNaN(a) && !isNaN(b) ){
+                    res = a / b;
+                    return status.innerHTML = res;
+                }else {
+                    return status.innerHTML =  'Enter the number!';
+                }
+                break;
+                default:
+                    return status.innerHTML =  'No such operation';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+            <p>Enter the namber 1<input type="text"  id="value1"></p>
+            <p>Enter the namber 2<input type="text"  id="value2"></p>
+            <p>Enter the operation<input type="text" id="operation"></p>
+            <p><input type="button" value="calculate" onclick="retCount()"></p>
+            <p>Result:  <span id="status"></span></p>
+    </div>    
+</body>
+</html>

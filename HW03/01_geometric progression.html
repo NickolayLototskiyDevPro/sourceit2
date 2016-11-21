@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Homework 3</title>
+  <script>
+      function countGP() {
+    var p = document.getElementById("reference point").value;
+    var i = document.getElementById("step").value;
+    var n = document.getElementById("limit").value;
+    var status = document.getElementById("status");
+    if ( isNaN(p) || isNaN(i) || isNaN(n) ) { //Check the number of
+        status.innerHTML = 'enter the number'; 
+    }else {
+        for ( var j=1; j<n; j++ ){
+            p *= i;
+        } 
+        return status.innerHTML =  p;
+    }  
+}
+     
+  </script>
+ </head> 
+ <body>
+  <form action="">
+   <h1>Counting exponentially</h1>  
+   <p>Enter the reference point:<input type="text" id="reference point"></p>
+   <p>Enter the step:<input type="text" id="step"></p>
+   <p>Enter the limit:<input type="text" id="limit"></p>
+   <p>Enter the step:<input type="button" value="Count up" onclick="countGP()"></p>
+   <p>Result:  <span id="status"></span></p>
+  </form>
+ </body>
+</html>
