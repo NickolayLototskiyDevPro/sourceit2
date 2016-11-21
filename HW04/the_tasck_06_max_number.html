@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Страница</title>
+<meta charset="utf-8">    
+</head>
+<body>
+    <script> 
+        var mass = [5, 8, 3, 4, 10, 20];
+        
+            function retMax(mass) { 
+                
+                var max = 0;
+                
+                for (var i = 0; i < mass.length; i++) {
+                    
+                    if (max < mass[i]) {
+                        
+                        max = mass[i];
+                        
+                    }
+                }
+                
+                return max;
+                
+                }
+        
+                alert(retMax(mass));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reverse</title>
+<meta charset="utf-8">    
+</head>
+<body>
+    <script> 
+        
+        var animals = ['rabbit','wolf','fox','tiger','bear'];
+        
+        for (var i = animals.length - 1; i >= 0; i--) {
+            
+            animals.push(animals[i]);//add to the end of the inverted array
+            
+        }
+        
+        for (var i = 0; i < animals.length-1; i++) {
+            
+            animals.shift(animals[i]);//remove from the end of the array
+            
+        }
+        
+        for (var i = 0; i < animals.length; i++) {
+        
+          console.log( animals[i] );
+            
+        }
+    </script>
+</body>
+</html>
