@@ -15,11 +15,7 @@ window.onload = init;
 
 function init() {
 	var messageString = document.getElementById("countAmmo");
-	messageString.innerHTML = Leopard_2А7.ammunition;
-	var messageString = document.getElementById("countResW");
-	// messageString.innerHTML = Leopard_2А7.reservoir/10;
-	var styleWidth = Leopard_2А7.reservoir/10 + '%';
-	messageString.style.width = styleWidth;
+	messageString.innerHTML = Leopard_2А7.ammunition;	
 
 	var com1 = document.getElementById('com1');
 	var com2 = document.getElementById('com2');
@@ -61,8 +57,8 @@ var Leopard_2А7 = {
 		'elevation range': '- 9 to + 20 degrees',
 		'traverse range': '360 degrees',
 	},
-	reservoir: 1000,
-	ammunition: 3,
+	ammunition: 10,
+	charged: false,
 	mobility: {
 		engine:	'MTU MB-837 Ka501 diesel',
 		'engine power':	'1 500 hp',
@@ -71,7 +67,8 @@ var Leopard_2А7 = {
 	},
 	started: false,
 	riding: false,
-	charged: false,
+	reservoir: 1000,
+
 	charge: function() {
 		if (this.ammunition) {
 			if (!this.charged) {
@@ -101,11 +98,15 @@ var Leopard_2А7 = {
 	},
 
 	start: function() {
-		if (!this.started) {
-			this.started = true;
-			view.displayDrive('<span class="blue">Started the engine of Leopard_2А7!</span>');
+		if (this.reservoir) {
+			if (!this.started) {
+				this.started = true;
+				view.displayDrive('<span class="blue">Started the engine of Leopard_2А7!</span>');
+			} else {
+				view.displayDrive('<span class="yellow">The engine already started!</span>');	
+			}
 		} else {
-			view.displayDrive('<span class="yellow">The engine already started!</span>');	
+			view.displayDrive('<span class="red">Reservoir empty</span>');
 		}
 	},
 
@@ -123,13 +124,13 @@ var Leopard_2А7 = {
 		if (this.reservoir) {
 			if (this.started && !this.riding) { 
 				this.riding = true;
-				this.reservoir -= 100;
+				this.reservoir -= 50;
 				view.displayDrive('<span class="green">Leopard_2А7 rides!</span>');
 				view.displayReservoir(this.reservoir);
 			} else if (this.started && this.riding) {
-				this.reservoir -= 100;
+				this.reservoir -= 50;
 				view.displayReservoir(this.reservoir);
-				view.displayDrive('<span class="yellow">Leopard_2А7 and so rides!</span>');
+				view.displayDrive('<span class="yellow">Leopard 2A7 is still going!</span>');
 			} else {
 				view.displayDrive('<span class="red">First you start the Leopard_2А7!</span>');
 			}
