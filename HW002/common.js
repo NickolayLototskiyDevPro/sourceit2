@@ -45,15 +45,17 @@ function factorialFor() {
 // arifm rpogression 
 function arifmPro() {
 	
-	var a1 = parseInt(prompt('Write first incremen:', 1));
+	var a1 = parseInt(prompt('Write first increment:', 1));
 	var d = parseInt(prompt('write difference of progression:', 2));
 	var n = parseInt(prompt('Write last number:', 5));
-//not complete 
-var arif = a1+d*(n-1);
-var arifS = n*(a1 + arifs)/2;
-var result = arif;
-alert(result);
 
+	function getAr(a1,d,n){
+		var arif = a1+d*(n-1); 
+		var arifS = n*(a1 + arif)/2;	//sum progression
+		return arifS;	
+	}
+	alert("arif progression of you numbers = " + getAr(a1,d,n));
+	
 }
 // abc abc 
 function abc() {
