@@ -70,3 +70,26 @@ section button:active {
 	margin: 0 auto;
 	max-width: 1170px;
 }
+
+.calculator table {
+	border-radius: 10px;
+	border:4px solid #666;
+	text-align: center;
+	width: 370px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.calculator table tr {
+	border-radius: 4px;
+	border:1px solid #666;
+}
+.calculator table input {
+	border-radius: 10px;
+	border:2px solid #666;	
+	text-align: center;
+}
+.calculator table select {
+	border-radius: 10px;
+	border:2px solid #666;	
+}
+

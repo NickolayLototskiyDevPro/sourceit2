@@ -28,21 +28,51 @@
 			<h3>1) Geo progression </h3>
 			<button type="button" onclick="geoPro()">Click this</button>
 		</section>
-		<section class="factorial">
+		<section class="calculator">
 			<h3>2)Get symbol to string</h3>                    
 			<button type="button" onclick="pluToString()">Click this</button>
-			<h3>3)Calculator</h3>                    
-			<button type="button" onclick="">Click this</button>
-		</section>
-		
+			<h3>3)Calculator</h3>            
+			<form id="form1" name="form1" method="post" action="">
+				<table>
+					<tr>
+						<td>First Number</td>
+						<td><input type="text" name="num1" id="num1" /></td>
+					</tr>
+					<tr>
+						<td>Second Number</td>
+						<td><input type="text" name="num2" id="num2" /></td>
+					</tr>
+					<tr>
+						<td>Chose operation</td>
+						<td>
+							<select name="select" id="select">
+								<option value="1">+</option>
+								<option value="2">-</option>
+								<option value="3">*</option>
+								<option value="4">/</option>							
+							</select></td>
+						</tr>
+						<tr>
+							<td>Result</td>
+							<td><input type="text" name="result" id="result" /></td>
+						</tr>
+						<tr>
+						<td></td>
+						<td><button type="button" name="button" id="button" onclick="calkulator()" />Click this</button></td>
+						</tr>
+					</table>
+				</form>
+
+			</section>
 
 
-	</div>
 
-	
-	<div class="hidden"></div>
+		</div>
 
-	
+
+		<div class="hidden"></div>
+
+
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
