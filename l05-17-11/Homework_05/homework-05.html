@@ -38,10 +38,34 @@
 			<div id="tab1" class="tab">
 				<div id="task1" class="task">
 					<h3>Задание 1</h3>
-					<p>Создание объекта Leopard_2А7</p>
-					<p class="press">Нажмите кнопку</p>
+					<p>Создание объекта танка молели "Leopard 2А7".</p>
+					<p class="attention"><i>Кнопки управления танком</i></p>
+					<button id="start" type="button" class="btn3d btn-prim" onclick="tankAction(this);"><span>start</span></button>
+					<button id="stop" type="button" class="btn3d btn-suc" onclick="tankAction(this);"><span>stop</span></button>
+					<button id="drive" type="button" class="btn3d btn-dang" onclick="tankAction(this);"><span>drive</span></button>
+					<div class="count-box">
+						<div class="flex-box">
+							<span>reservoir %:</span>
+							<div style="border: 1px solid #ccc; width: 100%; height: 26px;">
+								<i id="countResW"></i>
+							</div>
+						</div>
+					</div>
+					<p class="res">Action:<span id="tankAction" class="string grey">Tank stand still.</span></p>
+					<div class="air"></div>
+					<p class="attention"><i>Кнопки стрельбы</i></p>
+					<button id="charge" type="button" class="btn3d btn-prim" onclick="tankFire(this);"><span>charge</span></button>
+					<button id="fire" type="button" class="btn3d btn-dang" onclick="tankFire(this);"><span>fire</span></button>
+					<div class="count-box">
+						<div class="flex-box">
+							<span>ammunition:</span>
+							<span id="countAmmo"></span>
+						</div>
+					</div>
+					<p class="res">Action:<span id="tankFire" class="string grey">Tank stand still.</span></p>
+					<p class="press">Вывести на экран код объекта "Leopard 2А7"</p>
 					<a href="#" class="button" id="com1">Go!</a>
-					<p class="res">Результат:<span id="resultTaskOne" class="string">empty</span></p>
+					<p class="res"><span id="resultTaskOne" class="string"></span></p>
 				</div>
 				<div id="task2" class="task">
 					<h3>Задание 2</h3>

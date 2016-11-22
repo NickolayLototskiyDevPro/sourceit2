@@ -33,6 +33,7 @@ a:focus, a:hover { text-decoration: none !important; outline: medium none; }
 
 .clearfix { clear: both; }
 
+.air { width: 300px; height: 1px; background-color: #999; margin: 10px 0; }
 
 .main-wrapper { display: block; min-height: 100%; position: relative; background-color: #FFF;}
 
@@ -184,6 +185,103 @@ textarea[name="cropString"] {
 #task4 .input {
     margin: 5px 10px;
 }
+.grey {
+    color: #525354;
+}
+.green {
+    color: #78D739;
+}
+.red {
+    color: #D73814;
+}
+.yellow {
+    color: #bc9a0c;
+}
+.blue {
+    color: #4274D7;
+}
+
+/*button*/
+
+.btn3d {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 10px 2px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.33;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    transition: all 40ms linear;
+}
+.btn3d:active {
+    outline: 0;
+    top: 2px;
+}
+.btn-prim {
+    box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #4274D7;
+}
+.btn-prim:active {
+    box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+    background-color: #4274D7;
+}
+.btn-suc {
+    box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #D73814;
+}
+.btn-suc:active {
+    box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+    background-color: #D73814;
+}
+.btn-dang {
+    box-shadow: 0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #78d739;
+}
+.btn-dang:active {
+    box-shadow: 0 0 0 1px #30cd00 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+    background-color: #78d739;
+}
+.count-box {
+    display: inline-block;
+    margin-left: 30px; 
+}
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.flex-box span:nth-child(1) {
+    font-size: 12px;
+    color: #888;
+}
+.flex-box span:nth-child(2) {
+    font-size: 20px;
+    color: #8c3f0f;
+}
+#countResW {
+    height: 24px;
+    background-color: #81e721;
+    height: 100%;
+    display: block;
+}
+
+
 
 
 
