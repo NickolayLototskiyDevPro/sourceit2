@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+
+var palindrom = prompt('enter the word to check for palindrom', '');
+ var length = palindrom.length;
+ var palires = [];
+ for (i = 0; i < length; i++) {
+ 	palires[i] = palindrom[length - 1 - i];
+ 			 }
+ var strPalires;
+ strPalires = palires.join('');
+ if (strPalires == palindrom)
+ document.write('the ' + palindrom + ' is a palindrom');
+ else 
+ 	document.write('the ' + palindrom + ' is not a palindrom');
+</script>
+</body>
+</html>

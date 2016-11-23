@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+var matrix = [
+[2,5,8],
+[1,4,7],
+[3,6,9],
+];
+
+for(row = 0; row < matrix.length; row++) {
+	for(col = 0; col < matrix.length; col++) {
+		if (col == matrix.length -1)
+			document.write(matrix[row][col]);
+		else 
+			document.write(matrix[row][col] + ", ");
+
+	}
+	document.write("<br>");
+} 
+
+for (var row = 0; row < matrix.length; row++) {
+	var sum = 0;
+	
+	sum += matrix[row][row];
+	
+	document.write(sum);
+
+}
+  
+document.write(' - the main diagonal' );
+document.write('<br>');
+
+for (var col = 0; col < matrix.length; col++) {
+	var sum1 = 0;
+	sum1 += matrix[col][matrix.length - 1 - col];
+	
+	document.write(sum1);
+}
+
+	// не понимаю, почему выдает диагональ как строку, а не выдает сумму.
+</script>
+</body>
+</html>
