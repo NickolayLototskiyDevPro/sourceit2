@@ -26,7 +26,7 @@ function calculator() { //  Handling the click event
 
 function calc(target) { //  Handling the click event
 	var v = target.id; // get id element
-	var result = read(v); // call the function with a parameter id element
+	read(v); // call the function with a parameter id element
 };
 
 var read = function(sign) { 
