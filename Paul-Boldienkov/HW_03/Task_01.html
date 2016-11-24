@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>Geometric progression</title>
+</head>
+<body>
+<input type='button' value='calculate geometric progression' onclick='geomProgression()'/>
+</body>
+<script>
+
+const geomProgression = () => {
+
+	var b1 = parseInt(prompt('Please, enter first member of progression', 0), 10);
+	var q = parseInt(prompt('Please, enter step of progression', 0), 10);
+	var n = parseInt(prompt('Please, enter number of last position of progressin', 0), 10);
+
+		if(!isNaN(b1) && !isNaN(q) && !isNaN(n)) {
+
+			const calculateGeomProgression = (b1, q, n) => {
+				var bn = b1 * Math.pow(q, n - 1);
+				var Sn = (b1 - bn * q) / (1 - q);
+				return Sn;
+			}
+			alert(calculateGeomProgression(b1, q, n));
+		}
+		else {
+			alert('You entered not a number');
+		}
+}
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>Exclamation point</title>
+</head>
+<body>
+<input type='button' value='Exclamation point!!!' onclick='exclamationPoint()'/>
+</body>
+<script>
+const exclamationPoint = (str) => {
+
+	var str = prompt('Please, enter string:', '');
+
+	const putExclamationPoint = (str) => {
+		
+		str = '!' + str + '!';
+		return str
+	}
+	alert(putExclamationPoint(str));
+
+}
+
+</script>
+
+</html>

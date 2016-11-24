@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>ArProgression</title>
+</head>
+<body>
+<input type='button' value='Calculate arithmetic progression' onclick='arrProgression()'/>
+</body>
+<script type="text/javascript">
+	
+const arrProgression = () => {
+
+	var a1 = parseInt(prompt('Please, enter the first member of progression:', 0), 10);
+	var d = parseInt(prompt('Please, enter the step of progression:', 0), 10);
+	var n = parseInt(prompt('Please, enter the last member of progression:', 0), 10);
+
+	if(!isNaN(a1) && !isNaN(d) && !isNaN(n)){
+		
+		const calculateProgression = (a1,d,n) => {
+			var an = a1 + d * (n - 1);
+			var sum = (a1 + an) * n / 2;
+			return sum;
+		}
+		alert(calculateProgression(a1,d,n));
+	}
+	else {
+		alert('You entered not a number(s)');
+}
+}
+</script>
+
+</html>

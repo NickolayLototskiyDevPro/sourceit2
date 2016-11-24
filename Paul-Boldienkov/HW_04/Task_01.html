@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+	<title>Tank</title>
+</head>
+<body>
+
+</body>
+<script>
+var tank = {
+	'name': 'На Берлин',
+	'gun': {
+		trunk: 130,
+		projectile: 127
+	},
+	track: ['1', '2', '3', '4'],
+	engine: {
+		cylinder: 8,
+		volume: 9.3,
+		type: 'diesel'
+	},
+};
+	for (var key in tank) {
+    
+                if (typeof tank[key] == "object") {
+                    for (var key2 in tank[key])
+                        console.log(key + " : " + key2 + " : " + tank[key][key2]);                 
+                }
+                else {
+ console.log(key + " : " + tank[key]);
+                }
+        }  
+
+</script>
+</html>

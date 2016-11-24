@@ -5,8 +5,11 @@
 <meta charset="utf-8">
 	<title>Task_01</title>
 </head>
-<body>
+<body> 
+<input type='button' value='Convert "Lorem ipsum"' onclick='convertLoremIpsum()'\>
+</body>
 <script>
+	const convertLoremIpsum = () => {
 	var str = 'Lorem ipsum';
 	var a = '+';
 	var b = '-';
@@ -23,7 +26,7 @@
 				}
 				else {
 						if (i % 2 == 0) { //definition parity odd of cycle
-					if (str.charAt(str.legth - 1) == 'm' || str.charAt(str.legth - 1) == d) { // found last symbol of string and add new variable
+					if (str.charAt(str.length - 1) == 'm' || str.charAt(str.length - 1) == d) { // found last symbol of string and add new variable
 						str = str + a;
 					}
 					else if (str.charAt(str.length - 1) == a) {
@@ -68,8 +71,6 @@
              }
          }
         alert(strModern()); 
-
+}
 </script>
-
-</body>
 </html>

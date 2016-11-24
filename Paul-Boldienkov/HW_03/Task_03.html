@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<mata charset='utf-8'/>
+	<title>Pseudo calculation function</title>
+</head>
+<body>
+
+</body>
+<script>
+	const calculateNumbers = (num1, num2, sign) => {
+
+		if(!isNaN(num1) && !isNaN(num2)) {
+
+			switch (sign){
+				case '+': return num1 + num2;
+					breack;
+				case '-' : return num1 - num2;
+					breack;
+				case '/' : return num1 / num2;
+				breack;
+			}
+		}
+			else {
+				return false;
+			}
+
+		}
+	
+
+	console.log(calculateNumbers(100, 20 , '-'));
+
+
+</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>Task_02</title>
+</head>
+<body>
+<script>
+	function reverse(str) {
+		var rts = [];
+		for(var i = str.length - 1, j = 0; i >= 0; i--, j++)
+			rts[j] = str[i];
+		return rts.join('');
+	}
+	console.log(reverse('Hello, world'));
+</script>
+
+</body>
+</html>

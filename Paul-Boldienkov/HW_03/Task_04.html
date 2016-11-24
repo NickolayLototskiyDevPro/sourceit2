@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>Function without function</title>
+</head>
+<body>
+<input id='abc' type='text' name='Number' value='enter number here'/>
+<input type='button' value='OK' onclick='getNumberPlusOne()'/>
+</body>
+<script>
+const getNumberPlusOne = () => {
+
+	var num = parseInt(document.getElementById('abc').value, 10);
+	if(!isNaN(num)) {
+		alert(num + 1);
+	}
+	else{
+		alert('please,enter the number');
+	}
+
+}
+
+
+
+
+
+</script>
+</html>
