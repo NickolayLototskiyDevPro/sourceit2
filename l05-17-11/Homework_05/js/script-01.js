@@ -201,11 +201,12 @@ function showObj(obj,oname){
 			delta += deltastep;
 		}
 		for(var i in obj){
-			if( obj[i] == '[object Object]' ){
+			if( obj[i] == '[object Object]' || Array.isArray(obj[i])){
 				showObj(obj[i], oname + '.' + i);   // the call itself, if the embedded object
+			} else {
+				showobj_p += '\n' + delta + oname + '.' +i;
+				showobj_p += ' = ' + obj[i];
 			}
-			showobj_p += '\n' + delta + oname + '.' +i;
-			showobj_p += ' = ' + obj[i];
 		}
 		depth--;
 		delta= '';
