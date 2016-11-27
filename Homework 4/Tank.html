@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+   
+</head>
+<body>
+    <script type="text/javascript">
+var tank = {
+	cannon: {
+		    wheels: 2,
+		    trunk: 1,
+		    name: 'Hulk',
+		    ammunition: 15,
+	},
+	tower: 1,
+	tracks: ['track1', 'track2'],
+	engine: {
+		cylinders: 12,
+		volume: 40,
+		fuelType: 'Diesel'
+	}
+}
+console.log('tank has: ');
+console.log('cannon: ');
+console.log('- wheels: ' + tank.cannon.wheels);
+console.log('- trunk: ' + tank.cannon.trunk);
+console.log('- name ' + tank.cannon.name);
+console.log('- ammunition: ' + tank.cannon.ammunition);
+console.log('tower: ' + tank.tower);
+console.log('tracks: ' + tank.tracks);
+console.log('engine:');
+console.log('- cylinders: ' + tank.engine.cylinders);
+console.log('- volume: ' + tank.engine.volume);
+console.log('- fuel type: ' + tank.engine.fuelType);
+    </script>
+</body>
+</html>
