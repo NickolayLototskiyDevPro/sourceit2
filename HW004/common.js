@@ -56,7 +56,7 @@ function getEl() {
 		res = res +' '+ someStr[i];
 		
 	}
-	alert('четные елементы  массива:' + res);
+	alert('even elements of the array:' + res);
 
 }
 //Matrix sum diagonal
@@ -74,8 +74,8 @@ function getMatrix() {
 			}
 		}
 
-		console.log('сумма главной диаг. = '+ matRes);
-		console.log('сумма побоч диаг. = '+ matresP);
+		console.log('count main diagonal = '+ matRes);
+		console.log('count side diagonal = '+ matresP);
 
 	}
 // count numbers
