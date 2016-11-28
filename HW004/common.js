@@ -27,6 +27,19 @@ function getTank() {
 
 
 }
+// obratka true
+function getReverse() {
+
+	function strReverse(){
+		var stringR = ['one','two','three','four','five','six','seven','eight','nine','ten'];
+		var stringResult = [];
+		for( var i = stringR.length - 1; i >= 0; --i){
+			stringResult.push(stringR[i]);
+		}
+		return stringResult;
+	}
+	console.log(strReverse());
+}
 // taks 2 obratka 
 function getRev() {
 	var string = ['one','two','three','four','five','six','seven','eight','nine','ten'];
@@ -108,10 +121,11 @@ function getPolindrom() {
 // stroka delete
 
 function deleteWord() {
- var str = ['one','two','three','four'];
+	var str = ['one','two','three','four'];
 
- var strF = str.slice(0,1);
- var strS = str.slice(str.length -1);
- console.log(strF + strS);
+	var strF = str.slice(0,1);
+	var strS = str.slice(str.length -1);
+	var	result = strF + ' ' + strS;
+	console.log(result);
 
 }
