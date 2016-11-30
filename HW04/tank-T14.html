@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tank T14</title>
+</head>
+<body>
+
+</body>
+<script>
+    var tank = {
+        name: 'T14 Armata',
+        cannon: {
+            series: '2А83',
+            rounds: 45,
+            caliber: '152 mm'
+        },
+        maxWeight: 48,
+        crew: 3,
+        engine: {
+            type: 'four-cycle',
+            cylinder: 12
+        }
+    };
+    for (var key in tank){
+        if(typeof(tank[key])=='object'){
+            for (var value in tank[key]){
+                console.log(value +'-'+ key + ':' + tank[key][value]);
+            }
+        }else{
+            console.log(key + ':' + tank[key]);
+        }
+    }
+
+</script>
+</html>

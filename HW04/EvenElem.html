@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even element of arr</title>
+</head>
+<body>
+
+</body>
+<script>
+    var strings = ['Декабрь', 'Январь', 'Февраль', 'Март', 'Апрель', 'Май'];
+    var evenStr = new Array();
+    for(var key in strings){
+        if(key % 2 == 0){
+            evenStr.push(strings[key]);
+        }
+    }
+    console.log(evenStr);
+</script>
+</html>

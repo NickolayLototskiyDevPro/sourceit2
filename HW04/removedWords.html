@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Save first and last words</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = 'Lorem ipsum dolor sit amet consectetur adipiscing elit';
+    var strArray = str.split(' ');
+    var delStrArray = strArray.splice(1,strArray.length-2);
+    var newStr = strArray.join(' ');
+    console.log(newStr);
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var word = 'eve';
+    var letters = word.split('');
+    var newLetter = new Array();
+    for (var i = letters.length-1; i >= 0; i--){
+        newLetter.push(letters[i]);
+    }
+    var newWord = newLetter.join('');
+    if (word == newWord){
+        console.log('The word is a palindrome!');
+    }else{
+        console.log('The word is not a palindrome!');
+    }
+</script>
+</html>

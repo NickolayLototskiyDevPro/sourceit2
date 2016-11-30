@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closing</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = 'lorem ipsum';
+    var counter = (function () {
+        var i = 0;
+        return function () {
+            return i++
+        }
+    })();
+    var n = 10;
+    while (counter()<n){
+        console.log(str);
+    }
+</script>
+</html>

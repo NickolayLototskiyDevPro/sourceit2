@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix</title>
+</head>
+<body>
+
+</body>
+<script>
+    var matrix = [
+            [1,2,3,4],
+            [4,5,6,7],
+            [7,8,9,10],
+            [11,12,13,15]
+    ];
+    var res = 0;
+    for(var i=0;i < matrix.length; i++){
+        for( var j=0;j<matrix.length; j++){
+            if(i==j){
+                res += matrix[i][j];
+            }
+        }
+    }
+    console.log(res);
+</script>
+</html>
