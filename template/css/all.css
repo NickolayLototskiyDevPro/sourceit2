@@ -69,10 +69,6 @@ a, ins {
 	display: inline-block;
 	margin-left: 49px;
 }
-.header .nav li:hover{
-	transform: scale(1.4);
-	transition: 0.7s;
-}
 .first_block{
 	width: 100%;
 	height: 470px;
@@ -343,16 +339,12 @@ a, ins {
 .portfolio_block .tabs{
 	text-indent: 1px;
 	margin-left: 5px;
-	
-}
-.portfolio_block .tabs a{
 	color: #a7a7a7;
+	cursor: pointer;
 }
-.portfolio_block .tabs a:hover{
-	color: #a7a7a7;
+.active{
 	color: black;
-}   
-
+}
 .portfolio_block .tabs li{
 	display: inline-block;
 	margin-bottom: 41px;
@@ -360,17 +352,19 @@ a, ins {
 }
 .portfolio_block .img_block_wrapper{
 	width: 100%;
-	min-height: 650px;
+	height: 655px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-bottom: 20px;
-	
+	padding-bottom: 25px;
 }
+
+/* _***************************************** */
+
 .img_container{
     /* Как должны быть выражены 3D эффекты */
     perspective: 800px;
-    -webkit-perspective: 800px;
+    
     background: white;
     width:370px;
     height:290px;
@@ -378,13 +372,14 @@ a, ins {
 }
 .img_container .img_front,
 .img_container .img_back{
-	overflow:hidden;
     /* Подключение 3D трансформации */
     transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
+    
+    
      /*Мы используем 2 разных дива для передней и задней части телефона. Это свойство прячет див когда он поворачивается, таким образом будет показываться противоположная сторона*/
-     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    
+   
     width:370px;
     height:290px;
     position:absolute;
@@ -395,9 +390,10 @@ a, ins {
     transition:0.8s;
 }
 .img_back{
-    /* Задняя сторона поворачивается на 180 градусов по умолчанию */
+    Задняя сторона поворачивается на 180 градусов по умолчанию
     transform:rotateY(180deg);
     -webkit-transform:rotateY(180deg);
+   
     background:#506083;
 }
 .img_container .img_back h3{
@@ -412,27 +408,33 @@ a, ins {
    color: #ffffff;
 }
 .img_container .img_back .eye{
+	display: block;
     width: 40px;
     height: 40px;
     background: url("../img/eye.png") 50% 50% no-repeat;
     margin: 0 auto;
-
+}
+.img_container .img_back .eye:hover{
+	transform: scale(1.2, 1.2);
+	transition: 0.6s;
 }
 .img_container:hover .img_front{
     /*Когда на контейнер происходит наведение мышкой и срабатывает hover, повернуть переднюю часть и спрятать её */
     transform:rotateY(180deg);
-    -webkit-transform:rotateY(180deg);
+    
+    
 }
 .img_container:hover .img_back{
     /*... в то же время повернуть заднюю часть и сделать видимой*/
     transform:rotateY(360deg);
-    -webkit-transform:rotateY(360deg);
+   
+  
 }
+/* ****************************************** */
 .portfolio_block_bottom_block{
 	font-weight: 600;
 	font-size: 18px;
 	text-indent: 4px;
-
 }
 .portfolio_block_bottom_block h3{
 	font-weight: 700;
@@ -502,7 +504,7 @@ a, ins {
 	height: 263px;
 	border: 6px solid #ebebeb;
 	border-radius: 50%;
-	margin: 13px 0 0 50px;
+	margin: 8px 0 0 45px;
 }
 .reviews_block_customer_block .customer1{
 	background: url("../img/customer1.png") 50% 50% no-repeat;
@@ -593,11 +595,12 @@ a, ins {
 	width: 100%;
 	height: 512px;
 }
+
 .map-container iframe{
     width: 100%;
     display: block;
     pointer-events: none;
-    position: relative;
+    position: relative; /* IE needs a position other than static */
 }
 .map-container iframe.clicked{
     pointer-events: auto;
@@ -705,19 +708,13 @@ a, ins {
 	margin-right: 19px;
 	background: url("../img/sbutton.png") 0% 50% no-repeat;
 	}
-.contact_block_social_button .social-fb{
+	.contact_block_social_button .social-fb{
 	background: url("../img/sbutton.png") 50% 50% no-repeat;
 	}
-.contact_block_social_button .social-gl{
+	.contact_block_social_button .social-gl{
 	margin: 0;
 	background: url("../img/sbutton.png") 100% 50% no-repeat;
 	}
-.contact_block_social_button .social:hover,
-.contact_block_social_button .social-fb:hover,
-.contact_block_social_button .social-gl:hover{
-	background-image: url("../img/sbuttonGray.png");
-	/* transition-duration: 0.95s; */
-}	
 .contact_block_contact_list_wrapper{
  	width: 569px;
  	height: 318px;
@@ -761,11 +758,6 @@ a, ins {
  	margin-bottom: 20px;
  	margin-left: -1px;
 }
-.contact_block_form_wrapper input[type="text"]:hover,
-.contact_block_form_wrapper textarea:hover{
-	background-color: #ffffff;
-	/* transition-duration: 0.95s; */
-}
 .contact_block_form_wrapper input[type="submit"]{
     width: 156px;
     height: 57px;
@@ -774,25 +766,15 @@ a, ins {
     color: #ffffff;
     text-indent: -25px;
     display: block;
+    line-height: 60px;
 }
-.contact_block_form_wrapper input[type="submit"]:hover,
-.service_block button:hover,
-.box_transparent button:hover{
-	border: 2px solid #ffffff;
-	background: transparent;
-	/* transition-duration: 0.95s; */
-}
-.contact_block .scrolling_up{
+.scrolling_up{
 	width: 60px;
 	height: 60px;
 	background: url("../img/arrowUp.png") 50% 50% no-repeat;
 	display: block;
 	margin: 389px 0 0 1150px;
 }
-.contact_block .scrolling_up:hover{
-	background-image: url("../img/arrowUppBlack.png");
-}
-
 .footer{
 	height: 177px;
 	width: 100%;
