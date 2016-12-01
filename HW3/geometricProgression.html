@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+var start = prompt('Enter the first number of geometric progression', '');
+var step = prompt('Enter the step of geometrical progression', '');
+var limit = prompt('Enter the quantity numbers of geometrical progression', '');
+
+
+function geomProgression(start, step, limit) {
+	
+	if (isNaN(start) && isNaN(step) && isNaN(limit))
+			alert('Write a number!'); 
+	else if (start == 0) alert('The first number do not equally null!!');
+	else if (step == 0) alert('The step do not equally null!!');
+	else if (limit <= 0) alert('Quantity of members of geometrical progression must be bigger then null');
+	else {
+			for (i = 1; i < limit; i++) {
+
+				start *= step; 
+				document.write(start + ' ');
+			}
+
+	}
+	return 
+}
+document.write('The numbers of geometrical progression are: ' + start + ' ');
+geomProgression(start, step, limit);
+</script>
+</body>
+</html>

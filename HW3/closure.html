@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+var str = 'str ';
+	var j = 5;
+  var whl = (function(){
+	var i = 0;
+ 	return function() {
+ 		return i++;
+ 	}
+ }());
+while(whl() < j){
+	document.write(str);
+}
+
+</script>
+</body>
+</html>

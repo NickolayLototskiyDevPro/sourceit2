@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+
+
+function culc(a,b,operation){
+if(!isNaN(a) && !isNaN(b)){
+	switch (operation) {
+		case '+': document.write('Result of your operation: ' + (a + b));
+		break;
+		case '-': document.write('Result of your operation: ' + (a - b)); 
+		break;
+		case '*': document.write('Result of your operation: ' + (a * b));
+		break;
+		case '/': document.write('Result of your operation: ' + (a / b));
+		break;
+			}
+		}
+	else false;	
+	return
+}
+culc(35,45,'-');
+</script>
+</body>
+</html>
