@@ -1,18 +1,17 @@
 'use strict'
+var rescount = document.getElementById('resultCounter');
 
-/*$(document).ready(function($) {
-	$('.tabs_menu a').click(function(e) {
-		e.stopPropagation();
-		e.preventDefault();
-		$('.tabs_menu .active').removeClass('active');
-		$(this).addClass('active');
-		$('.task').hide();
-		$('#'+$(this).attr('href')).fadeIn(400);
-	});
-});*/
+function makeCounterString() {
+	var str = '';
+	function counter() {
+		var string = document.forms.form1.elements.string.value.trim();
+		str = str + string+', ';
+		return rescount.innerHTML = counter.currentCount++ +' '+ str ;
+	}
+	counter.currentCount = 1;
 
-window.onload = init;
 
-function init() {
-	
+	return counter;
 }
+
+var counterString = makeCounterString();
