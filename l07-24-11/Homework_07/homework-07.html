@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homework_07</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div class="main-wrapper">
+		<header>
+	 		<h1>Homework №07</h1>
+		</header>
+		<div class="main-contant">
+			<ul class="nav-portofolio tabs_menu">
+				<li><a href="task1" class="active">Задание 1</a></li>
+			</ul>
+			<div id="tab1" class="tab">
+				<div id="task1" class="task">
+					<h3>Задание 1</h3>
+					<p>Создание экземпляра объекта "Tank". Будущая модель - "Leopard 2А7".</p>
+					<p class="attention"><i>Кнопки управления танком</i></p>
+					<button id="start" type="button" class="btn3d btn-prim" onclick="tankAction(this);"><span>start</span></button>
+					<button id="stop" type="button" class="btn3d btn-suc" onclick="tankAction(this);"><span>stop</span></button>
+					<button id="drive" type="button" class="btn3d btn-dang" onclick="tankAction(this);"><span>drive</span></button>
+					<div class="count-box">
+						<i id="countResW" class="reservoir"></i>
+					</div>
+					<span class="count-title">reservoir with fuel %</span>
+					<p class="res">Action:<span id="tankAction" class="string grey">Tank stand still.</span></p>
+					<div class="air"></div>
+					<p class="attention"><i>Кнопки стрельбы</i></p>
+					<button id="charge" type="button" class="btn3d btn-prim" onclick="tankFire(this);"><span>charge</span></button>
+					<button id="fire" type="button" class="btn3d btn-dang" onclick="tankFire(this);"><span>fire</span></button>
+					<div class="ammo"><span id="countAmmo"></span>&nbsp;pcs</div>
+					<span class="count-title">ammunition</span>
+					<p class="res">Action:<span id="tankFire" class="string grey">It's time to shoot.</span></p>
+					<div class="air"></div>
+					<p class="press">Вывести на экран код объекта "Leopard 2А7"</p>
+					<a href="#" class="button" id="com1">Go!</a>
+					<p class="res"><span id="resultTaskOne" class="string"></span></p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="copyright">
+				<span class="year">© 2016</span>
+				<a href="#" target="_blank" onclick="return false;">Design &amp; Development - Dmytro-Vasylenko</a>
+			</div>
+		</footer>
+	</div>
+
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/script-01.js"></script>
+</body>
+</html>
