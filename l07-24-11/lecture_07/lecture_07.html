@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>function</title>
+</head>
+<body>
+	
+<script>
+
+/*function Obj() {
+	this.a = 'str';
+	this.b = true;
+	this.c = 1
+}
+
+var newobj = new Obj;
+
+console.log(newobj);
+
+newobj.v = 'rrrr';
+
+console.log(newobj);
+
+var df = new Obj;
+
+console.log(df);
+*/
+/*
+function Car(name, wheel, suspension) {
+	Driver.call(this, 'vasia');
+	this.wheel = wheel;
+	this.rudder = false;
+	this.run = function () {
+		if (this.rudder || this.name ==='vasia') {
+			console.log(this.name + ' run whis ' +  this.wheel);
+		} else {
+			console.log('stop!');
+		}
+		
+	};
+	this.suspension = suspension;
+}
+
+var mers = new Car('mers', 4, '4*4');
+
+mers.run();
+
+function Driver(name) {
+	this.name = name;
+}*/
+
+function Car(name, wheel, suspension) {
+	this.wheel = wheel;
+	this.rudder = false;
+	this.run = function () {
+		if (this.rudder || this.name ==='vasia') {
+			console.log(this.name + ' run whis ' +  this.wheel);
+		} else {
+			console.log('stop!');
+		}
+		
+	};
+	this.suspension = suspension;
+}
+
+var mers = new Car('mers', 4, '4*4');
+
+mers.run();
+
+function Driver(name) {
+	this.name = name;
+}
+
+var go = bind(Driver('vasia'), mers.run());
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
