@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>function</title>
+</head>
+<body>
+	
+<script>
+
+/*function Obj() {
+	this.a = 'str';
+	this.b = true;
+	this.c = 1
+}
+
+var newobj = new Obj;
+
+console.log(newobj);
+
+newobj.v = 'rrrr';
+
+console.log(newobj);
+
+var df = new Obj;
+
+console.log(df);
+*/
+/*
+function Car(name, wheel, suspension) {
+	Driver.call(this, 'vasia');
+	this.wheel = wheel;
+	this.rudder = false;
+	this.run = function () {
+		if (this.rudder || this.name ==='vasia') {
+			console.log(this.name + ' run whis ' +  this.wheel);
+		} else {
+			console.log('stop!');
+		}
+		
+	};
+	this.suspension = suspension;
+}
+
+var mers = new Car('mers', 4, '4*4');
+
+mers.run();
+
+function Driver(name) {
+	this.name = name;
+}*/
+
+/*function Car(name, wheel, suspension) {
+	this.wheel = wheel;
+	this.rudder = false;
+	this.run = function () {
+		if (this.rudder || this.name ==='vasia') {
+			console.log(this.name + ' run whis ' +  this.wheel);
+		} else {
+			console.log('stop!');
+		}
+		
+	};
+	this.suspension = suspension;
+}
+
+var mers = new Car('mers', 4, '4*4');
+
+mers.run();
+
+function Driver(name) {
+	this.name = name;
+}
+
+var go = bind(Driver('vasia'), mers.run());
+*/
+
+/*var Nums = {
+	a: 2,
+	b: 2
+};
+function printSum(x, y) {
+  console.log( this[x] + this[y] );
+}
+printSum.call(Nums, 'a', 'b')
+
+
+function f (y) {
+	console.log(this.x + y);
+};
+var obj = { x:1}
+var z = f.bind(obj,2);
+z(2);*/
+
+function Animal(params) {
+	this.kind = params.kind;
+	this.height = params.height;
+	this.length = params.length;
+	this.legs = params.legs;
+	this.color = params.color;
+	this.tail = params.tail;
+	this.mammal = params.mammal;
+	this.m = params.m;
+};
+
+var BarsikParams  = {
+	kind: 'Cat',
+	height: 20,
+	length: 60,
+	legs: 4,
+	color: 'red',
+	tail: 'tail',
+	mammal: true,
+	m: function () {
+		return 'miau';
+	}
+};
+
+var Barsik = new Animal(BarsikParams);
+
+console.log(Barsik.m());
+
+
+function Vehicle (power, wheels) {
+	var SPARK_PLUGS = 2;
+	this.wheels = wheels;
+
+	this.beep = function () {
+		console.log('Vehicle has ' + power + ' horse powers and ' + SPARK_PLUGS + ' spark plugs' );
+		console.log('Beep beep!');
+	};
+}
+
+var cab = new Vehicle(40, 4);
+
+cab.beep();
+
+console.log(cab.wheels);
+
+
+
+</script>
+</body>
+</html>
