@@ -1,4 +1,16 @@
 'use strict'
+
+$(document).ready(function($) {
+	$('.tabs_menu a').click(function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$('.tabs_menu .active').removeClass('active');
+		$(this).addClass('active');
+		$('.task').hide();
+		$('#'+$(this).attr('href')).fadeIn(400);
+	});
+});
+
 window.onload = init;
 
 function init() {
@@ -177,3 +189,19 @@ var view = {
 		}
 	}
 };
+
+//*******************************start task2***************************
+
+var res = document.getElementById('resultTaskTwo');
+
+function startTimer() {
+	var i = 10;
+	var timerId = setTimeout( function start() {
+		res.innerHTML = i;
+		if ( i > 0) setTimeout(start, 1000);
+		i--;
+	},1000);
+
+};
+
+//*******************************start task3***************************

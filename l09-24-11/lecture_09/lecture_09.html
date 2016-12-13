@@ -8,6 +8,8 @@
 	
 <script>
 
+'use strict'
+
 /*function Obj() {
 	this.a = 'str';
 	this.b = true;
@@ -92,7 +94,7 @@ var obj = { x:1}
 var z = f.bind(obj,2);
 z(2);*/
 
-function Animal(params) {
+/*function Animal(params) {
 	this.kind = params.kind;
 	this.height = params.height;
 	this.length = params.length;
@@ -118,10 +120,10 @@ var BarsikParams  = {
 
 var Barsik = new Animal(BarsikParams);
 
-console.log(Barsik.m());
+console.log(Barsik.m());*/
 
 
-function Vehicle (power, wheels) {
+/*function Vehicle (power, wheels) {
 	var SPARK_PLUGS = 2;
 	this.wheels = wheels;
 
@@ -135,7 +137,70 @@ var cab = new Vehicle(40, 4);
 
 cab.beep();
 
-console.log(cab.wheels);
+console.log(cab.wheels);*/
+
+var animal = {
+	run: true
+};
+
+function Cat() {
+	this.addMethod = function (name,data) {
+		this.name= data;
+	};
+}
+
+Cat.prototype.constructor = Cat;
+Cat.prototype = animal;
+
+var barsik = new Cat();
+
+barsik.addMethod('name', 'Barsik');
+console.log(barsik.name);
+
+console.log(barsik);
+
+
+console.log(barsik.run);
+
+
+
+/*var a = { b:'1', c:'2'};
+
+var z = function (i) {
+	console.log(this.b +this.c + i);
+}
+
+
+z.call(a, 3);
+
+var d = z.bind(a);
+
+d(3);*/
+
+
+
+
+/*var a = 1;
+
+var z = function () {
+	var a = 2;
+	return function () {
+		console.log(a);
+		a++;
+	}
+}
+var c = z();
+console.log(a);
+c();
+console.log(a);
+c();
+c();
+
+var l = c();*/
+
+
+
+
 
 
 
