@@ -21,14 +21,13 @@
 				<li>/</li>
 				<li><a href="task2">Задание 2</a></li>
 			</ul>
-			<div id="tab1" class="tab">
-				<div id="task1" class="task">
-					<h3>Задание 1</h3>
-					<p>Создание экземпляра объекта "Tank". Будущая модель - "Leopard 2А7".</p>
+			<div id="task1" class="task">
+				<h3>Задание 1</h3>
+				<p>Создание экземпляра объекта "Tank". Будущая модель - "Leopard 2А7".</p>
+				<div class="col-6">
 					<p class="attention"><i>Кнопки управления танком</i></p>
-					<button id="start" type="button" class="btn3d btn-prim" onclick="tankAction(this);"><span>start</span></button>
-					<button id="stop" type="button" class="btn3d btn-suc" onclick="tankAction(this);"><span>stop</span></button>
-					<button id="drive" type="button" class="btn3d btn-dang" onclick="tankAction(this);"><span>drive</span></button>
+					<button id="start" type="button" class="btn3d btn-prim" onclick="tankReadiness(this);"><span>start</span></button>
+					<button id="stop" type="button" class="btn3d btn-suc" onclick="tankReadiness(this);"><span>stop</span></button>
 					<div class="count-box">
 						<i id="countResW" class="reservoir"></i>
 					</div>
@@ -43,6 +42,41 @@
 					<p class="res">Action:<span id="tankFire" class="string grey">It's time to shoot.</span></p>
 					<div class="air"></div>
 				</div>
+				<div class="col-6">
+					<div id="field">
+						<table>
+							<tr>
+								<td id="0"></td>
+								<td id="1"></td>
+								<td id="2"></td>
+							</tr>
+							<tr>
+								<td id="3"></td>
+								<td id="4"></td>
+								<td id="5"></td>
+							</tr>
+							<tr>
+								<td id="6"></td>
+								<td id="7"></td>
+								<td id="8"></td>
+							</tr>
+						</table>
+						<div id="tank">T</div>
+					</div>
+					<div class="block-button">
+						<div class="center">
+							<button id="up" type="button" class="btn3d btn-dang" onclick="tankMove(this);"><span>up</span></button>
+						</div>
+						<div>
+							<button id="left" type="button" class="btn3d btn-dang" onclick="tankMove(this);"><span>left</span></button>
+							<button id="right" type="button" class="btn3d btn-dang" onclick="tankMove(this);"><span>down</span></button>
+						</div>
+						<div class="center">
+							<button id="down" type="button" class="btn3d btn-dang center" onclick="tankMove(this);"><span>right</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
 			</div>
 			<div id="task2" class="task">
 					<h3>Задание 2</h3>
@@ -50,11 +84,14 @@
 					<p class="attention"><i>Реализация таймера с обратным отсчетом</i></p>
 					<p class="press">Нажмите кнопку</p>
 					<a href="#" class="button" onclick="startTimer();">Go!</a>
-					<p class="res">Результат:
+					<p class="res offset-bottom4">Результат:
 						<span class="led">
 							<span id="resultTaskTwo" class="transition">-</span>
 						</span>
 					</p>
+					<p class="press">Вывести на экран код функции"</p>
+					<a href="#" class="button" onclick="printFuncton();">Go!</a>
+					<p class="res"><span id="resultTaskTwoFunction" class="string"></span></p>
 				</div>
 		</div>
 		<footer>

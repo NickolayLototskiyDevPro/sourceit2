@@ -31,6 +31,8 @@ a:focus, a:hover { text-decoration: none !important; outline: medium none; }
 .display-none { display: none; }
 .display-block { display: block; }
 
+.col-6 { width: 50%; float: left; }
+
 .clearfix { clear: both; }
 
 .air { width: 300px; height: 1px; background-color: #999; margin: 10px 0; }
@@ -255,6 +257,7 @@ textarea[name="cropString"] {
 .btn-dang {
     box-shadow: 0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color: #78d739;
+    min-width: 75px;
 }
 .btn-dang:active {
     box-shadow: 0 0 0 1px #30cd00 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
@@ -299,6 +302,50 @@ textarea[name="cropString"] {
     box-shadow: inset 0px 0px 6px #00D329, 0px 0px 17px #534F46;
     text-shadow: 0px 5px 6px #00D329;
 }
+
+/******************************field******************************/
+#field { position:relative; width: 300px; height: 300px;}
+
+#tank { 
+    position: absolute;
+    top: 33.333%;
+    font-size: 50px;
+    right: 33.333%;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+table {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #222;
+    background-color: green;
+}
+table td {
+    border: 1px solid #555;
+}
+
+.block-button {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 200px;
+    height: 150px;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.block-button #right { float: right; }
+
+
 
 /* main */
 
