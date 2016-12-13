@@ -16,15 +16,15 @@ window.onload = init;
 function init() {
 	var messageString = document.getElementById("countAmmo");
 	messageString.innerHTML = Leopard_2A7.ammunition;
-	positionTank();
+	positionTank(Leopard_2A7.position);
 }
 //*******************************start task1(Leopard_2А7)******************************
 
-var ActionTank = {
+var ActionTank = {                 // Properties and methods of the object prototype
 	charged: false,
 	started: false,
 	riding: false,
-	position: 4,
+	position: [100, 100],
 
 	charge: function() {
 		if (this.ammunition) {
@@ -45,6 +45,7 @@ var ActionTank = {
 				this.ammunition--;
 				view.displayAmmunition(this.ammunition);
 				view.displayFire('<span class="green">Bang!</span>');
+				view.displayBang();
 			} else {
 				view.displayFire('<span class="yellow">First you charge the gun!</span>');
 			}
@@ -73,19 +74,21 @@ var ActionTank = {
 			view.displayDrive('<span class="yellow">The Leopard_2А7 and so stopped</span>');
 		}
 	},
-	drive: function() {
+	drive: function(i, dis) {
 		if (this.reservoir) {
 			if (this.started && !this._riding) { 
 				this.riding = true;
-				this.reservoir -= 20;
-				this.movement();
+				this.reservoir -= 10;
+				this.position[i] = dis;
 				view.displayDrive('<span class="green">Leopard_2А7 rides!</span>');
+				view.displayPosition(i, dis);
 				view.displayReservoir(this.reservoir);
 			} else if (this._started && this._riding) {
-				this.reservoir -= 20;
-				this.movement();
+				this.reservoir -= 10;
+				this.position[i] = dis;
 				view.displayReservoir(this.reservoir);
 				view.displayDrive('<span class="yellow">Leopard 2A7 is still going!</span>');
+				view.displayPosition(i, dis);
 			} else {
 				view.displayDrive('<span class="red">First you start the Leopard_2А7!</span>');
 			}
@@ -93,13 +96,9 @@ var ActionTank = {
 			view.displayDrive('<span class="red">Reservoir empty</span>');
 		}
 	},
-	movement: function() {
-		this.position++;
-		console.log(this.position);
-	}
 };
 
-function Tank(params) {
+function Tank(params) {          // constructor function
 	this.name = params.name;
 	this.country = params.country;
 	this.crew = params.crew;
@@ -110,7 +109,7 @@ function Tank(params) {
 	this.reservoir = params.reservoir
 }
 
-var Leopard_2A7_Params = {
+var Leopard_2A7_Params = {     // create object literal and pass it as an argument to the constructor
 	name: 'Leopard_2А7',
 	country: 'Germany',
 	crew: ['driver mechanic', 'commander', 'aimer', 'charger'],
@@ -142,26 +141,58 @@ Tank.prototype = ActionTank;
 
 var Leopard_2A7 = new Tank(Leopard_2A7_Params);
 
-var positionTank = function() {
-	console.log(Leopard_2A7.position);
+function positionTank(pos) {        // positioning the tank
+	var position = document.getElementById("tank");
+	position.style.cssText='left: ' + pos[0] + 'px; top: ' + pos[1] + 'px';
 }
 
-function tankFire(target) {
+function tankFire(target) {       // click controller
 	var act = target.id;
 	act == 'charge' ? Leopard_2A7.charge(): Leopard_2A7.fire();
 }
 
-function tankReadiness(target) {
+function tankReadiness(target) {       // click controller
 	var act = target.id;
 	act == 'start' ? Leopard_2A7.start(): Leopard_2A7.stop();
 }
 
-function tankMove(target) {
-	var act = target.id;
-	Leopard_2A7.drive();
+function tankMove(target) {       // click controller
+	var route = target.id;
+	var x, y;
+	switch (route) {
+		case 'right':
+			x = Leopard_2A7.position[0];
+			if (x >= 0 && x < 200) {
+				x += 100;
+				Leopard_2A7.drive(0, x);
+			}
+			break;
+		case 'left':
+			x = Leopard_2A7.position[0];
+			if (x > 0 && x <= 200) {
+				x -= 100;
+				Leopard_2A7.drive(0, x);
+			}
+			break;
+		case 'down':
+			y = Leopard_2A7.position[1];
+			if (y >=0 && y < 200) {
+				y += 100;
+				Leopard_2A7.drive(1, y);
+			}
+			break;
+		case 'up':
+			y = Leopard_2A7.position[1];
+			if (y > 0 && y <= 200) {
+				y -= 100;
+				Leopard_2A7.drive(1, y);
+			}
+			break;
+	}
+
 }
 
-var view = {
+var view = {          //  create view
 	displayDrive: function(msg) {
 		var messageString = document.getElementById("tankAction");
 		messageString.innerHTML = msg;
@@ -169,6 +200,13 @@ var view = {
 	displayFire: function(msg) {
 		var messageString = document.getElementById("tankFire");
 		messageString.innerHTML = msg;
+	},
+	displayBang: function() {
+		var messageString = document.getElementById("bang_tank");
+		messageString.style.cssText='display: block; opacity: 1';
+		var bangNone = setTimeout( function() {
+			messageString.style.cssText='display: none; opacity: 0';
+		},500);
 	},
 	displayAmmunition: function(msg) {
 		var messageString = document.getElementById("countAmmo");
@@ -184,7 +222,11 @@ var view = {
 		} else {
 			messageString.style.width = styleWidth + '%';
 		}
-	}
+	},
+	displayPosition: function(coor, value) {
+		var position = document.getElementById("tank");
+		coor ? position.style.top = value + 'px': position.style.left = value + 'px';
+	},
 };
 
 //*******************************start task2***************************

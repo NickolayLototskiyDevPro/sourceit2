@@ -1,5 +1,5 @@
 html { height: 100%; }
-body { position: relative; font-family: 'Roboto', sans-serif; font-size: 16px; color: #333; position: relative; height: 100%; width: 100%;}
+body { position: relative; font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.4; color: #333; position: relative; height: 100%; width: 100%;}
 
 ol, ul { list-style: none; padding: 0;}
 
@@ -30,8 +30,6 @@ a:focus, a:hover { text-decoration: none !important; outline: medium none; }
 
 .display-none { display: none; }
 .display-block { display: block; }
-
-.col-6 { width: 50%; float: left; }
 
 .clearfix { clear: both; }
 
@@ -88,11 +86,12 @@ a.button:hover {
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 .string {
-	font-size: 16px;
-	color: #ff3f0f;
-	padding: 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff3f0f;
+    padding: 0 20px;
     margin: 0;
-	display: inline-block;
+    display: inline-block;
 }
 sub {
     font-size: 9px;
@@ -246,22 +245,30 @@ textarea[name="cropString"] {
     box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
     background-color: #4274D7;
 }
-.btn-suc {
+.btn-dang {
     box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color: #D73814;
 }
-.btn-suc:active {
+.btn-dang:active {
     box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
     background-color: #D73814;
 }
-.btn-dang {
+.btn-suc {
     box-shadow: 0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color: #78d739;
     min-width: 75px;
 }
-.btn-dang:active {
+.btn-suc:active {
     box-shadow: 0 0 0 1px #30cd00 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
     background-color: #78d739;
+}
+.btn-warning {
+    box-shadow: 0 0 0 1px #d79a47 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #D79A34, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #FEAF20;
+}
+.btn-warning:active {
+    box-shadow: 0 0 0 1px #d79a47 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+    background-color: #FEAF20;
 }
 .count-box {
     border: 1px solid #ccc;
@@ -304,33 +311,42 @@ textarea[name="cropString"] {
 }
 
 /******************************field******************************/
-#field { position:relative; width: 300px; height: 300px;}
-
-#tank { 
-    position: absolute;
-    top: 33.333%;
-    font-size: 50px;
-    right: 33.333%;
-    width: 100px;
-    height: 100px;
-    z-index: 1;
-}
-
-table {
-    position: relative;
+#field {
+    position:relative;
     width: 300px;
     height: 300px;
     border: 1px solid #222;
     background-color: green;
+    margin-left: 335px;
 }
-table td {
-    border: 1px solid #555;
+#tank { 
+    position: absolute;
+    background: url("../img/battle.png") no-repeat center center;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+}
+#bang_tank {
+    position: relative;
+    top: -100px;
+    display: none;
+    opacity: 0;
+    -moz-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+    -webkit-transition: 0.1s ease-out;
+    transition: 0.1s ease-out;
+}
+
+.сontrol-block {
+    min-width: 300px;
+    float: left;
+    margin: 30px;
 }
 
 .block-button {
     position: relative;
-    margin-left: 50px;
-    margin-top: 30px;
     width: 200px;
     height: 150px;
 }

@@ -24,57 +24,43 @@
 			<div id="task1" class="task">
 				<h3>Задание 1</h3>
 				<p>Создание экземпляра объекта "Tank". Будущая модель - "Leopard 2А7".</p>
-				<div class="col-6">
+				<div id="field">
+					<div id="tank" class="transition">
+						<img id="bang_tank" src="img/bangTank.png" width="100" height="100">
+					</div>
+				</div>
+				<div class="сontrol-block">
+					<p class="attention"><i>Кнопки стрельбы</i></p>
+					<button id="charge" type="button" class="btn3d btn-prim" onclick="tankFire(this);"><span>charge</span></button>
+					<button id="fire" type="button" class="btn3d btn-warning" onclick="tankFire(this);"><span>fire</span></button>
+					<div class="ammo"><span id="countAmmo"></span>&nbsp;pcs</div>
+					<span class="count-title">ammunition</span>
+					<p class="res">Action:<span id="tankFire" class="string grey">It's time to shoot.</span></p>
+				</div>
+				<div class="сontrol-block">
+					<div class="block-button">
+						<div class="center">
+							<button id="up" type="button" class="btn3d btn-suc" onclick="tankMove(this);"><span>up</span></button>
+						</div>
+						<div>
+							<button id="left" type="button" class="btn3d btn-suc" onclick="tankMove(this);"><span>left</span></button>
+							<button id="right" type="button" class="btn3d btn-suc" onclick="tankMove(this);"><span>down</span></button>
+						</div>
+						<div class="center">
+							<button id="down" type="button" class="btn3d btn-suc center" onclick="tankMove(this);"><span>right</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="сontrol-block">
 					<p class="attention"><i>Кнопки управления танком</i></p>
 					<button id="start" type="button" class="btn3d btn-prim" onclick="tankReadiness(this);"><span>start</span></button>
-					<button id="stop" type="button" class="btn3d btn-suc" onclick="tankReadiness(this);"><span>stop</span></button>
+					<button id="stop" type="button" class="btn3d btn-dang" onclick="tankReadiness(this);"><span>stop</span></button>
 					<div class="count-box">
 						<i id="countResW" class="reservoir"></i>
 					</div>
 					<span class="count-title">reservoir with fuel %</span>
 					<p class="res">Action:<span id="tankAction" class="string grey">Tank stand still.</span></p>
-					<div class="air"></div>
-					<p class="attention"><i>Кнопки стрельбы</i></p>
-					<button id="charge" type="button" class="btn3d btn-prim" onclick="tankFire(this);"><span>charge</span></button>
-					<button id="fire" type="button" class="btn3d btn-dang" onclick="tankFire(this);"><span>fire</span></button>
-					<div class="ammo"><span id="countAmmo"></span>&nbsp;pcs</div>
-					<span class="count-title">ammunition</span>
-					<p class="res">Action:<span id="tankFire" class="string grey">It's time to shoot.</span></p>
-					<div class="air"></div>
-				</div>
-				<div class="col-6">
-					<div id="field">
-						<table>
-							<tr>
-								<td id="0"></td>
-								<td id="1"></td>
-								<td id="2"></td>
-							</tr>
-							<tr>
-								<td id="3"></td>
-								<td id="4"></td>
-								<td id="5"></td>
-							</tr>
-							<tr>
-								<td id="6"></td>
-								<td id="7"></td>
-								<td id="8"></td>
-							</tr>
-						</table>
-						<div id="tank">T</div>
-					</div>
-					<div class="block-button">
-						<div class="center">
-							<button id="up" type="button" class="btn3d btn-dang" onclick="tankMove(this);"><span>up</span></button>
-						</div>
-						<div>
-							<button id="left" type="button" class="btn3d btn-dang" onclick="tankMove(this);"><span>left</span></button>
-							<button id="right" type="button" class="btn3d btn-dang" onclick="tankMove(this);"><span>down</span></button>
-						</div>
-						<div class="center">
-							<button id="down" type="button" class="btn3d btn-dang center" onclick="tankMove(this);"><span>right</span></button>
-						</div>
-					</div>
+					
 				</div>
 				<div class="clearfix"></div>
 			</div>
