@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homework_09</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div class="main-wrapper">
+		<header>
+	 		<h1>Homework №09</h1>
+		</header>
+		<div class="main-contant">
+			<ul class="nav-portofolio tabs_menu">
+				<li><a href="task1" class="active">Задание 1</a></li>
+				<li>/</li>
+				<li><a href="task2">Задание 2</a></li>
+			</ul>
+			<div id="task1" class="task">
+				<h3>Задание 1</h3>
+				<p>Создание экземпляра объекта "Tank". Будущая модель - "Leopard 2А7".</p>
+				<div id="field">
+					<div id="tank" class="transition">
+						<img id="bang_tank" src="img/bangTank.png">
+					</div>
+					<img src="img/headquarters.jpg" class="headquarters">
+				</div>
+				<div class="сontrol-block">
+					<p class="attention"><i>Кнопки стрельбы</i></p>
+					<button id="charge" type="button" class="btn3d btn-prim" onclick="tankFire(this);"><span>charge</span></button>
+					<button id="fire" type="button" class="btn3d btn-warning" onclick="tankFire(this);"><span>fire</span></button>
+					<div class="ammo"><span id="countAmmo"></span>&nbsp;pcs</div>
+					<span class="count-title">ammunition</span>
+					<p class="res">Action:<span id="tankFire" class="string grey">It's time to shoot.</span></p>
+				</div>
+				<div class="сontrol-block">
+					<div class="block-button">
+						<div class="center">
+							<button id="up" type="button" class="btn3d btn-suc" onclick="tankMove(this);"><span>up</span></button>
+						</div>
+						<div>
+							<button id="left" type="button" class="btn3d btn-suc" onclick="tankMove(this);"><span>left</span></button>
+							<button id="right" type="button" class="btn3d btn-suc" onclick="tankMove(this);"><span>right</span></button>
+						</div>
+						<div class="center">
+							<button id="down" type="button" class="btn3d btn-suc center" onclick="tankMove(this);"><span>down</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="сontrol-block">
+					<p class="attention"><i>Кнопки управления танком</i></p>
+					<button id="start" type="button" class="btn3d btn-prim" onclick="tankReadiness(this);"><span>start</span></button>
+					<button id="stop" type="button" class="btn3d btn-dang" onclick="tankReadiness(this);"><span>stop</span></button>
+					<div class="count-box">
+						<i id="countResW" class="reservoir"></i>
+					</div>
+					<span class="count-title">reservoir with fuel %</span>
+					<p class="res">Action:<span id="tankAction" class="string grey">Tank stand still.</span></p>
+					
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div id="task2" class="task">
+					<h3>Задание 2</h3>
+					<p>Вывод чисел каждые 1000 мс, через setTimeout.</p>
+					<p class="attention"><i>Реализация таймера с обратным отсчетом</i></p>
+					<p class="press">Нажмите кнопку</p>
+					<a href="#" class="button" onclick="startTimer();">Go!</a>
+					<p class="res offset-bottom4">Результат:
+						<span class="led">
+							<span id="resultTaskTwo" class="transition">-</span>
+						</span>
+					</p>
+					<p class="press">Вывести на экран код функции"</p>
+					<a href="#" class="button" onclick="printFuncton();">Go!</a>
+					<p class="res"><span id="resultTaskTwoFunction" class="string"></span></p>
+				</div>
+		</div>
+		<footer>
+			<div class="copyright">
+				<span class="year">© 2016</span>
+				<a href="#" target="_blank" onclick="return false;">Design &amp; Development - Dmytro-Vasylenko</a>
+			</div>
+		</footer>
+	</div>
+
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/script-01.js"></script>
+</body>
+</html>
