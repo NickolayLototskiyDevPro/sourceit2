@@ -317,7 +317,7 @@ textarea[name="cropString"] {
     height: 300px;
     border: 1px solid #222;
     background-color: green;
-    margin-left: 335px;
+    margin-left: 328px;
 }
 #tank { 
     position: absolute;
@@ -340,7 +340,7 @@ textarea[name="cropString"] {
 }
 
 .сontrol-block {
-    min-width: 300px;
+    min-width: 290px;
     float: left;
     margin: 30px;
 }
