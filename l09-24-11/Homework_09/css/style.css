@@ -313,24 +313,38 @@ textarea[name="cropString"] {
 /******************************field******************************/
 #field {
     position:relative;
-    width: 300px;
-    height: 300px;
-    border: 1px solid #222;
-    background-color: green;
-    margin-left: 328px;
+    width: 350px;
+    height: 350px;
+    background-color: #000;
+    margin-left: 280px;
+    border-style: solid;
+    border-width: 25px;
+    -webkit-border-image: url("../img/wall.jpg") 25 repeat;
+    -moz-border-image: url("../img/wall.jpg") 25 repeat;
+    -o-border-image: url("../img/wall.jpg") 25 repeat;
+    border-image: url("../img/wall.jpg") 25 repeat;
 }
 #tank { 
     position: absolute;
     background: url("../img/battle.png") no-repeat center center;
-    width: 100px;
-    height: 100px;
-    top: 100px;
-    left: 100px;
-    z-index: 1;
+    width: 50px;
+    height: 50px;
+    top: 150px;
+    left: 150px;
+    z-index: 5;
+    background-size: cover;
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 #bang_tank {
     position: relative;
-    top: -100px;
+    z-index: 10;
+    top: -44px;
+    width: 50px;
+    height: 50px;
     display: none;
     opacity: 0;
     -moz-transition: 0.1s ease-out;
@@ -338,7 +352,12 @@ textarea[name="cropString"] {
     -webkit-transition: 0.1s ease-out;
     transition: 0.1s ease-out;
 }
-
+.headquarters {
+    position: absolute;
+    z-index: 15;
+    bottom: 0;
+    left: 150px;
+}
 .сontrol-block {
     min-width: 290px;
     float: left;

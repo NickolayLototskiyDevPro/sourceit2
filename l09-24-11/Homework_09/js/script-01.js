@@ -24,7 +24,8 @@ var ActionTank = {                 // Properties and methods of the object proto
 	charged: false,
 	started: false,
 	riding: false,
-	position: [100, 100],
+	position: [150, 150],
+	rotate: 0,
 
 	charge: function() {
 		if (this.ammunition) {
@@ -74,21 +75,23 @@ var ActionTank = {                 // Properties and methods of the object proto
 			view.displayDrive('<span class="yellow">The Leopard_2А7 and so stopped</span>');
 		}
 	},
-	drive: function(i, dis) {
+	drive: function(i, dis, r) {
 		if (this.reservoir) {
 			if (this.started && !this._riding) { 
 				this.riding = true;
-				this.reservoir -= 10;
+				this.reservoir -= 5;
 				this.position[i] = dis;
+				this.rotate = r;
 				view.displayDrive('<span class="green">Leopard_2А7 rides!</span>');
-				view.displayPosition(i, dis);
+				view.displayPosition(i, dis, r);
 				view.displayReservoir(this.reservoir);
 			} else if (this._started && this._riding) {
-				this.reservoir -= 10;
+				this.reservoir -= 5;
 				this.position[i] = dis;
+				this.rotate = r;
 				view.displayReservoir(this.reservoir);
 				view.displayDrive('<span class="yellow">Leopard 2A7 is still going!</span>');
-				view.displayPosition(i, dis);
+				view.displayPosition(i, dis, r);
 			} else {
 				view.displayDrive('<span class="red">First you start the Leopard_2А7!</span>');
 			}
@@ -158,34 +161,39 @@ function tankReadiness(target) {       // click controller
 
 function tankMove(target) {       // click controller
 	var route = target.id;
-	var x, y;
+	var x, y, r;
 	switch (route) {
 		case 'right':
 			x = Leopard_2A7.position[0];
-			if (x >= 0 && x < 200) {
-				x += 100;
-				Leopard_2A7.drive(0, x);
+			if (x >= 0 && x < 300) {
+				x += 50;
+				r = 90;
+				Leopard_2A7.drive(0, x, r);
 			}
 			break;
 		case 'left':
 			x = Leopard_2A7.position[0];
-			if (x > 0 && x <= 200) {
-				x -= 100;
-				Leopard_2A7.drive(0, x);
+			if (x > 0 && x <= 300) {
+				x -= 50;
+				r = 270;
+				Leopard_2A7.drive(0, x, r);
 			}
 			break;
 		case 'down':
 			y = Leopard_2A7.position[1];
-			if (y >=0 && y < 200) {
-				y += 100;
-				Leopard_2A7.drive(1, y);
+			if (y >=0 && y < 300) {
+				y += 50;
+				r = 180;
+				Leopard_2A7.drive(1, y, r);
 			}
 			break;
 		case 'up':
 			y = Leopard_2A7.position[1];
-			if (y > 0 && y <= 200) {
-				y -= 100;
-				Leopard_2A7.drive(1, y);
+			r = Leopard_2A7.rotate;
+			if (y > 0 && y <= 300) {
+				y -= 50;
+				r = 0;
+				Leopard_2A7.drive(1, y, r);
 			}
 			break;
 	}
@@ -223,12 +231,14 @@ var view = {          //  create view
 			messageString.style.width = styleWidth + '%';
 		}
 	},
-	displayPosition: function(coor, value) {
+	displayPosition: function(coor, value, rotate) {
 		var position = document.getElementById("tank");
-		coor ? position.style.top = value + 'px': position.style.left = value + 'px';
+		position.style.transform = 'rotate(' + rotate + 'deg)';
+		var posTank = setTimeout( function() {
+			coor ? position.style.top = value + 'px': position.style.left = value + 'px';
+		},200);
 	},
 };
-
 //*******************************start task2***************************
 
 var res = document.getElementById('resultTaskTwo');
