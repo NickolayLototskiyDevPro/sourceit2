@@ -145,8 +145,11 @@ input[type="button"] {
     text-align: center;
     width: auto;
 }
-input[name="palindrome"] {
-    width: 200px;
+input[name="palindrome"], input[name="letters"] {
+    width: 300px;
+}
+.alphabet > .input > p {
+    text-align: left;
 }
 textarea[name="cropString"] {
     width: 400px;
