@@ -1,6 +1,5 @@
 'use strict'
 
-var error = document.getElementById('errorAlphabet');
 var vowels = [65, 69, 73, 79, 85, 89, 97, 101, 105, 111, 117, 121];
 
 document.getElementsByTagName('input')[0].onkeypress = function(e) {
