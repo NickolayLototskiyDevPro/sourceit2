@@ -145,8 +145,8 @@ input[type="button"] {
     text-align: center;
     width: auto;
 }
-input[name="palindrome"], input[name="letters"] {
-    width: 300px;
+input[name="palindrome"], input[name="letters"], input[name="scrambler"] {
+    width: 600px;
 }
 .alphabet > .input > p {
     text-align: left;
@@ -383,7 +383,9 @@ textarea[name="cropString"] {
 }
 .block-button #right { float: right; }
 
+/********************************************/
 
+.keytext { display: none; }
 
 /* main */
 

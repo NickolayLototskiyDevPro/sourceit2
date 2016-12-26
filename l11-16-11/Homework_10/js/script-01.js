@@ -1,28 +1,114 @@
 'use strict'
 
-var vowels = [65, 69, 73, 79, 85, 89, 97, 101, 105, 111, 117, 121];
+$(document).ready(function($) {
+	$('.tabs_menu a').click(function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$('.tabs_menu .active').removeClass('active');
+		$(this).addClass('active');
+		$('.task').hide();
+		$('#'+$(this).attr('href')).fadeIn(400);
+	});
+});
 
-document.getElementsByTagName('input')[0].onkeypress = function(e) {
+//*******************************start task1***************************//
 
-	var chr = getChar(e);
+function isPalindrome() {
+	var res = document.getElementById('resultTaskOne');
+	var string = document.forms.form1.elements.palindrome.value;
+	var str = string.replace(/\s/g, "");
+	var strLen = str.length;
 
-	if (chr == null) return;
-
-	for (var i = 0; i < vowels.length; i++) {
-		if (vowels[i] == chr) return false;
+	for (var i = 0; i < strLen; i++) {
+		if (str[i] === str[strLen - 1 - i]) {          //  Compare all the elements from the beginning of the line with all the elements from the end of the line
+			continue;
+		} else {
+			return res.innerHTML = 'Фраза <i>"' + string + '"</i> не является палиндромом.';
+		}
 	}
+
+	return res.innerHTML = 'Фраза <i>"' + string + '"</i> является палиндромом.';
+};
+
+//*******************************start task2***************************//
+
+function isScrambler() {
+	var res = document.getElementById('resultTaskTwo');
+	var key = document.getElementById('key').innerHTML.toLowerCase();
+	var string = document.forms.form2.elements.scrambler.value.toLowerCase();
+	var result = '';
+	var i = 0;
+	var j = 0;
+	
+	for (i; i < string.length; i++) {
+		other: for (j; j < key.length; j++) {
+
+			if (string[i] == key[j]) {
+				result += j + ' ';
+				break other;
+			}
+		}
+	}
+
+	return res.innerHTML = result;
+};
+
+function isPalindrome() {
+	var res = document.getElementById('resultTaskTwo');
+	var key = document.getElementById('key').innerHTML.toLowerCase();
+	var string = document.forms.form2.elements.scrambler.value.trim();
+	string = string.split(" ");
+	var result = '';
+	
+	for (var i = 0; i < string.length; i++) {
+		result += key.charAt(string[i]);
+
+	}
+
+	return res.innerHTML = result;
+};
+
+//*******************************start task3***************************//
+
+function isBissextile() {
+	var res = document.getElementById('resultTaskThree');
+	var year = document.forms.form3.elements.year.value;
+	year = +year;
+	if (IsLeapYear(year)) {
+		return res.innerHTML = year + ' год - високосный';
+	} else {
+		return res.innerHTML = year + ' год - не високосный';
+	}
+};
+
+function IsLeapYear(year) { 
+	if(year%4 == 0) { 
+		if(year%100 == 0) { 
+			if (year%400 == 0) { 
+				return true; 
+			} else {
+				return false; 
+			}
+		} else {
+			return true; 
+		}
+	}
+	return false; 
 }
 
-function getChar(event) {
-	if (event.which == null) {
-		if (event.keyCode < 32) return null; // special key
-		return event.keyCode // IE
-	}
 
-	if (event.which != 0 && event.charCode != 0) {
-		if (event.which < 32) return null; // special key
-		return event.which // other
-	}
+function isDays() {
+	var res = document.getElementById('resultTaskFour');
+	var day = document.forms.form4.elements.day.value;
+	var month = document.forms.form4.elements.month.value;
+	var year = document.forms.form4.elements.year.value;
+	month = month - 1;
 
-	return null; // special key
+	var now = new Date();
+	var today = now.getTime();
+	var d = Date.parse(year, month, day);
+	var difference = d;/*Math.floor((today - d) / 60 / 60 / 24);*/
+
+	return res.innerHTML = 'С даты рождения прошло ' + difference + ' дней';
 }
+ // 13506626
