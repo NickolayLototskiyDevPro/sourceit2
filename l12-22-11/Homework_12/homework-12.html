@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Homework_10</title>
+    <title>Homework_12</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -13,7 +13,7 @@
 
 	<div class="main-wrapper">
 		<header>
-	 		<h1>Homework №10</h1>
+	 		<h1>Homework №12</h1>
 		</header>
 		<div class="main-contant">
 			<ul class="nav-portofolio tabs_menu">
@@ -21,13 +21,20 @@
 			</ul>
 			<div id="task1" class="task">
 				<h3>Задание 1</h3>
-				<p>Создать поле <i>input</i>  в котором нельзя ввести англ. гласные буквы.</p>
-				<form name="alphabet" class="alphabet">
+				<p>Создать конструктор таблиц</p>
+				<form name="table" class="constructor-table">
 					<div class="input">
-						<p>введите буквы</p>
-						<input type="text" name="letters" value='' maxlength="32" placeholder="tsrc">
+						<p>количество строк</p>
+						<input type="text" name="row" value='' maxlength="6" placeholder="5">
+					</div>
+					<div class="input">
+						<p>количество колонок</p>
+						<input type="text" name="col" value='' maxlength="6" placeholder="5">
 					</div>
 				</form>
+				<p class="press">Нажмите кнопку</p>
+				<a href="#" class="button" onclick="createTable()">Создать таблицу</a>
+				<p class="res">Результат:<span id="resultTaskOne" class="string"></span></p>
 			</div>
 		</div>
 		<footer>
