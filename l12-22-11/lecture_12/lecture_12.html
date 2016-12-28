@@ -9,25 +9,32 @@
 
 <h2>Try jquery</h2>
 <h2>Try jquery</h2>
+
 <input type="button" value="Try jquery" onclick="tryIt()">
 	
+<p id="arr"></p>
 <script>
 
 
-/*var m = [1,2,3,5];
+var m = [1,2,3,5];
 var d = [ { 1: 'v'}, { 2:'c'}, { 4: 'd'}];
 var res = [];
+var p = document.getElementById('arr');
 
 function newArray (m, d) {
 	for (var i = 0; i < m.length; i++) {
 		for (var j = 0; j < d.length; j++) {
-			console.log('d[i].j');
+			for (key in d[j]) {
+				if (m[i] == key) {
+					res.push(d[j]);
+					p.innerHTML = res[j];
+				}
+			}
 		}
 	}
 }
 
-newArray(m, d);*/
-
+newArray(m, d);
 
 function tryIt() {
 	$('h2').css('color','red');
