@@ -1,0 +1,354 @@
+/*
+Responsive menu jQuery
+Muhammad Adam Firdaus
+http://www.muhammadadamfirdaus.com/
+*/
+
+/* begin MENU */
+nav {
+	box-sizing: border-box;
+	list-style: none;
+}
+
+.scroll-container {
+	padding: 0 20px;
+}
+
+.menu div:before {
+	content:'';
+	border-top:1px solid #fff;
+	display: block;
+}
+
+.menu li {
+	float:left;
+	position:relative;
+	line-height: 40px;
+	height:40px;
+	padding:0 12px;
+}
+
+.menu li:first-child {
+	padding-left:0;
+}
+
+.menu li a {
+	color:#fff;
+	font-family:"Roboto-Light";
+	font-size:13px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.menu li a {
+	padding:12px 6px;
+}
+
+.menu li:first-child a {
+	padding-left:0;
+}
+
+.menu li a:hover {
+	color:rgba(255,255,255,0.75);
+	-moz-transition: background-color 0.4s ease-out;
+	-webkit-transition: background-color 0.4s ease-out;
+	-o-transition: background-color 0.4s ease-out;
+	transition: background-color 0.4s ease-out;
+}
+
+.menu li ul {
+	display: none;
+	position:absolute;
+	left:4px;
+	top:40px;
+	background: #555;
+}
+
+.menu ul li {
+	display:block;
+	z-index:5;
+	width:154px;
+	padding:0;
+}
+
+.menu ul li a {
+	display:block;
+	padding:0 15px;
+}
+
+.menu li ul li:first-child a {
+	display:block;
+	padding:0 15px;
+}
+
+.menu li ul li a:hover {
+	color:rgba(255,255,255,0.75);
+}
+
+.menu-mobile {
+	display:none;
+}
+
+/* end MENU */
+
+@media screen and (max-width:800px) {
+	* {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	} /* hide blink mobile touch */
+
+	.menu-mobile {
+		display:block;
+		text-align: center;
+		width:32px;
+		height:32px;
+		right:0;
+		top:0;
+		position: absolute;
+		padding-top: 20px;
+		z-index: 9999;
+	}
+
+	.menu-mobile a,
+	.menu-mobile:before,
+	.menu-mobile:after {
+		background: #fff;
+		position: absolute;
+		margin: auto;
+		width: 100%;
+		height: 1px;
+	}
+
+	.menu-mobile:before {
+		-webkit-transform: translate(-16px, 0);
+		transform: translate(-16px, 0);
+	}
+
+	.menu-mobile:after {
+		-webkit-transform: translate(-16px, 8px);
+		transform: translate(-16px, 8px);
+	}
+
+	.menu-mobile a {
+		color: #fff;
+		font-size: 9px;
+		line-height: 26px;
+		letter-spacing: 2.2px;
+		text-decoration:none;
+		text-transform: uppercase;
+		-webkit-transform: translate(-16px, 16px);
+		transform: translate(-16px, 16px);
+		transition: background 0.5s ease, width 0.5s ease;
+	}
+
+	.menu-mobile:before,
+	.menu-mobile:after {
+		content:'';
+		display: inline-block;
+		/*animation: circle 0.5s ease;*/
+		transition: all 1s ease;
+	}
+
+	/*@-webkit-keyframes circle {
+		0% {transform: rotate(0);}
+		100% {transform: rotate(360deg);}
+	}
+	@keyframes circle {
+		0% {transform: rotate(0);}
+		100% {transform: rotate(360deg);}
+	}*/
+
+	/*.close a,
+	.close:before,
+	.close:after {
+	}*/
+
+	.close a {
+		font-size: 45%;
+		width: 0;
+		transition: width 0.5s ease-out, background 0.5s ease;
+		-webkit-transform: translate(-16px, 16px);
+		transform: translate(-16px, 16px);
+	}
+
+	.close:before,
+	.close:after {
+		transition: all 0.5s ease-in;
+	}
+
+	.close:before {
+		-webkit-transform: rotate(45deg) translate(-8px, 16px);
+		transform: rotate(45deg) translate(-8px, 16px);
+	}
+
+	.close:after {
+		-webkit-transform: rotate(-45deg) translate(-16px, -8px);
+		transform: rotate(-45deg) translate(-16px, -8px);
+	}
+
+	nav {
+		border:0;
+	}
+
+	.menu,
+	.search {
+		background:#555;
+	}
+
+	.menu {
+		position: absolute;
+		right: 0;
+		width: 0;
+		min-height: 100%;
+		z-index: 2;
+	}
+
+	.menu .scroll-container {
+		position:relative;
+	}
+
+	.menu-expanded {
+		width:50%;
+		transition: width 0.8s ease;
+		/*transition: width 1s cubic-bezier(0, 0.15, 0.1, 3);*/
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+	}
+
+	.menu-collapsed {
+		width:0;
+		transition: width 0.8s ease;
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+	}
+
+	.menu div:before {
+		border-top:0;
+	}
+
+	.menu li {
+		float:none;
+		height: auto;
+		line-height: 40px;
+		margin: 40px 0;
+		padding: 0 28px 0 56px;
+	}
+
+	.menu li:nth-child(1) {
+		padding-left: 56px;
+	}
+
+	.menu li:nth-child(1) a {
+		padding-left: 6px;
+	}
+
+	.menu li:last-child {
+		margin-bottom: 70%;
+	}
+
+	.menu li ul li:last-child {
+		margin-bottom: 0;
+	}
+
+	.menu li ul {
+		display: none;
+		position: relative;
+		top:0;
+	}
+
+	.menu li ul li {
+		background:none;
+	}
+
+	.menu li ul li:first-child {
+		margin-top:20px;
+	}
+
+	.menu li ul li,
+	.menu li ul li:first-child {
+		padding-left: 36px;
+	}
+
+	.menu li ul li:first-child a {
+		padding-left: 15px;
+	}
+
+	.menu li a {
+		font-size: 160%;
+		line-height: 40px;
+	}
+
+	.container {
+		overflow: hidden;
+	}
+
+	.main {
+		position: relative;
+		height: 100vh;
+	}
+
+	.main .scroll-container {
+		margin-top: 80px;
+	}
+
+	.scroll-container {
+		height:100vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.header .col:nth-child(1) {
+		width:25%;
+	}
+
+	.header .col:nth-child(2) {
+		width:60%;
+	}
+
+	.header .col:nth-child(3) {
+		width: 15%;
+	}
+}
+
+@media screen and (max-width: 385px) {
+	.menu-mobile {
+		padding-top: 10px;
+		transform: scale(0.8);
+	}
+
+	.menu li:last-child {
+		margin-bottom: 55%;
+	}
+
+	.menu li ul li:last-child {
+		margin-bottom: 0;
+	}
+
+	.menu-mobile a {
+		font-size: 9px;
+		line-height: 20px;
+		letter-spacing: 2.2px;
+	}
+
+	.menu-expanded {
+		width: 70%;
+	}
+
+	.menu li:nth-child(1),
+	.menu li,
+	.menu li ul li:nth-child(1),
+	.menu li ul li {
+		margin: 10px 0;
+		padding: 0 28px;
+	}
+
+	.menu li:nth-child(1) a,
+	.menu li a {
+		font-size: 100%;
+	}
+
+	.scroll-container {
+		margin-bottom: 28%;
+	}
+}
